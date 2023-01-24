@@ -5,6 +5,7 @@ import { useSpring, useTrail,animated,a, config } from 'react-spring'
 import background from "./img/IMG_4871.jpg";
 import snoopy from "./img/IMG_7330.jpg"
 
+/*
 const Trail: React.FC<{ open: boolean }> = ({ open}) => {
   const msg = "Welcome to My Profile Page.";
   const trails = useTrail(msg.length, {
@@ -24,6 +25,7 @@ const Trail: React.FC<{ open: boolean }> = ({ open}) => {
     </div>
   )
 }
+*/
 
 function App() {
   const [open, set] = useState(true);

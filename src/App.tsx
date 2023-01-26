@@ -1,34 +1,11 @@
 import styled from 'styled-components';
-import React from 'react';
-import { useState } from 'react';
-import { useSpring, useTrail,animated,a, config } from 'react-spring'
+//import React from 'react';
+import { useSpring, animated } from 'react-spring'
 import background from "./img/IMG_4871.jpg";
 import snoopy from "./img/IMG_7330.jpg"
-
-/*
-const Trail: React.FC<{ open: boolean }> = ({ open}) => {
-  const msg = "Welcome to My Profile Page.";
-  const trails = useTrail(msg.length, {
-    config: { tension: 5000, friction: 200 },
-    opacity: open ? 1 : 0,
-    x: open ? 0 : 0,
-    height: open ? 100 : 0,
-    from: { opacity: 0, x: 0, height: 0 },
-  })
-  return (
-    <div>
-      {trails.map((trail, idx) => (
-        <animated.span style={{ ...trail, paddingLeft: idx * 0.5 }}>
-          {msg[idx]}
-        </animated.span>
-      ))}
-    </div>
-  )
-}
-*/
+import { Header } from './components/Header';
 
 function App() {
-  const [open, set] = useState(true);
   const styles = useSpring({
     loop: true,
     to: [
@@ -39,14 +16,7 @@ function App() {
   });
   return (
     <div className="App">
-      <SDiv>
-      <h1>My Profile</h1>
-      <ul>
-        <li>Top</li>
-        <li>About</li>
-        <li>Work</li>
-      </ul>
-      </SDiv>
+      <Header title='My Profile' />
       <SDivTop>
         <div className='snoopy'>
           <img src={snoopy}></img>
@@ -65,26 +35,6 @@ function App() {
   );
 };
 
-const SDiv = styled.div`
-display:flex;
-align-items: center;
-background-color: black;
-font-family: Georgia, serif;
-h1 {
-  margin-left: 2%;
-  color: white;
-}
-ul {
-  display: flex;
-  list-style:none;
-  margin-left:30%;
-  color: white;
-  li {
-    margin-left:40px;
-    font-size: 18px;
-  }
-}
-`;
 
 const SDivTop = styled.div`
 position: relative;
@@ -139,7 +89,5 @@ height: 700px;
   }
 }
 `;
-
-
 
 export default App;

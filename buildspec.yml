@@ -10,6 +10,9 @@ phases:
     build:
         commands:
             - npm run build
+    post_build:
+        commands:
+            - cp appspec.yml build/
 artifacts:
     files:
         - '**/*'

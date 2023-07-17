@@ -1,4 +1,4 @@
-import { Avatar, Card, CardHeader } from "@material-ui/core";
+import { Avatar, Card, CardHeader } from "@mui/material";
 import CakeIcon from '@mui/icons-material/Cake';
 
 type Props = {

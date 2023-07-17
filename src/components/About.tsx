@@ -2,8 +2,7 @@ import styled from "styled-components";
 import CakeIcon from '@mui/icons-material/Cake';
 import BloodtypeIcon from '@mui/icons-material/Bloodtype';
 import { CardContent, Grid, Typography,Avatar } from "@mui/material";
-import { Card } from "@material-ui/core";
-import { ProfItem } from "./ProfItem";
+import { Card } from "@mui/material";
 import windowsserver from "../img/windowsserver.jpg";
 import centos from "../img/centos.jpg";
 import ubuntu from "../img/ubuntu.jpg";
@@ -14,70 +13,17 @@ import java from "../img/java.jpg";
 import python from "../img/python.jpg";
 import javascript from "../img/javascript.jpg";
 import typescript from "../img/typescript.jpg";
-
-type ProfObject = {
-    icon:JSX.Element,
-    title:string,
-    subheader:string
-};
+import { Profile } from "./Profile";
 
 export const About = () => {
-    const profItems : ProfObject[] = [
-        {
-            icon:<CakeIcon />,
-            title:"誕生日",
-            subheader:"1993/2/26"
-        },
-        {
-            icon:<CakeIcon />,
-            title:"星座",
-            subheader:"うお座"
-        },
-        {
-            icon:<BloodtypeIcon />,
-            title:"血液型",
-            subheader:"B型"
-        },
-        {
-            icon:<CakeIcon />,
-            title:"出身",
-            subheader:"大阪府枚方市"
-        },
-        {
-            icon:<CakeIcon />,
-            title:"職業",
-            subheader:"ITエンジニア"
-        },
-        {
-            icon:<CakeIcon />,
-            title:"好きな食べ物",
-            subheader:"チョコレート"
-        }
-    ];
     return (
         <>
-        <SDiv>
-            <h1>プロフィール</h1>
-            <SSDiv>
-                <Grid container spacing={3} columns={{  xs:6, sm: 8, md: 12 }} alignItems='center' justifyContent='center'>
-                {profItems.map((profItem: ProfObject) => {
-                    return (
-                        <Grid item xs={6} sm={4} md={4}>
-                            <ProfItem 
-                            icon={profItem.icon}
-                            title={profItem.title}
-                            subheader={profItem.subheader}
-                            />
-                        </Grid>
-                    );
-                })}
-                </Grid>
-            </SSDiv>
-        </SDiv>
+        <Profile />
         <SDiv>
             <h1>スキルセット</h1>
-            <Grid container spacing={4} columns={{ xs: 2 }} alignItems='center' justifyContent='center'>
-                <Grid item xs={1}>
+            <GridDiv>
+            <Grid container spacing={4} columns={{ xs: 6, md: 8 }} alignItems='center' justifyContent='center'>
+                <Grid item xs={6} md={4}>
                     <Card>
                         <CardContent>
                             <Typography align="center" variant="h4">
@@ -93,7 +39,7 @@ export const About = () => {
                         </CardContent>
                     </Card>
                 </Grid>
-                <Grid item xs={1}>
+                    <Grid item xs={6} md={4}>
                     <Card>
                         <CardContent>
                             <Typography align="center" variant="h4">
@@ -109,7 +55,7 @@ export const About = () => {
                         </CardContent>
                     </Card>
                 </Grid>
-                <Grid item xs={1}>
+                    <Grid item xs={6}  md={4}>
                     <Card>
                         <CardContent>
                             <Typography align="center" variant="h4">
@@ -126,7 +72,7 @@ export const About = () => {
                         </CardContent>
                     </Card>
                 </Grid>
-                <Grid item xs={1}>
+                <Grid item xs={6} md={4}>
                     <Card>
                         <CardContent>
                             <Typography align="center" variant="h4">
@@ -143,7 +89,8 @@ export const About = () => {
                         </CardContent>
                     </Card>
                 </Grid>
-            </Grid>     
+            </Grid>
+            </GridDiv>   
         </SDiv>
         <SDiv>
             <h1>資格</h1>
@@ -152,14 +99,9 @@ export const About = () => {
     );
 };
 
-const SSDiv = styled.div`
-
-padding-left: 70px;
-padding-right: 70px;
-`;
 
 const SDiv = styled.div`
-background-color: lightgray;
+background-color: gray;
 margin: 0;
 height: 600px;
 h1 {
@@ -167,6 +109,12 @@ h1 {
     margin: 0;
 }
 `;
+
+const GridDiv = styled.div`
+padding-left: 70px;
+padding-right: 70px;
+`;
+
 
 const SDivFlex = styled.div`
 display: flex;

@@ -1,5 +1,5 @@
 import { CardContent, Grid, Typography, Avatar } from "@mui/material";
-import { Card } from "@material-ui/core";
+import { Card } from "@mui/material";
 import java from "../img/java.jpg";
 import python from "../img/python.jpg";
 import javascript from "../img/javascript.jpg";

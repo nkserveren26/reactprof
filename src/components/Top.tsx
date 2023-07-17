@@ -3,6 +3,7 @@ import { useSpring, animated } from 'react-spring'
 import background from "../img/IMG_4871.jpg";
 import snoopy from "../img/IMG_7330.jpg"
 import { Header } from './Header';
+import axios from 'axios';
 
 export const Top = () => {
     const styles = useSpring({
@@ -12,7 +13,18 @@ export const Top = () => {
           { opacity: 1, color: 'rgb(14,26,19)' },
         ],
         from: { opacity: 1, color: 'red' },
+    });
+    const getData = async () => {
+      const res = await axios.get("https://jmavkaw0w5.execute-api.ap-northeast-1.amazonaws.com/prod/getdata")
+      console.log(res.data);
+    };
+    const postData = async () => {
+      const res = await axios.post("https://wyrp1za853.execute-api.ap-northeast-1.amazonaws.com/prod/postdata",{
+        firstName: "三郎",
+        lastName: "田中"
       });
+      console.log(res);
+    };
     return (
         <div className="App">
           <SDivTop>
@@ -29,6 +41,7 @@ export const Top = () => {
               </p>
             </div>
           </SDivTop>
+        <button onClick={postData}>click</button>
         </div>
       );
 };

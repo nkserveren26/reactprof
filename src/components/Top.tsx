@@ -6,31 +6,22 @@ import { Header } from './Header';
 import axios from 'axios';
 
 export const Top = () => {
-    const styles = useSpring({
-        loop: true,
-        to: [
-          { opacity: 1, color: '#ffaaee' },
-          { opacity: 1, color: 'rgb(14,26,19)' },
-        ],
-        from: { opacity: 1, color: 'red' },
-    });
     const getData = async () => {
       const res = await axios.get("https://jmavkaw0w5.execute-api.ap-northeast-1.amazonaws.com/prod/getdata")
       console.log(res.data);
     };
     const postData = async () => {
-      const res = await axios.post("https://wyrp1za853.execute-api.ap-northeast-1.amazonaws.com/prod/postdata",{
+      const res = await axios.post("https://945ak6zkp7.execute-api.ap-northeast-1.amazonaws.com/prod/postdata",{
         firstName: "三郎",
         lastName: "田中"
       });
-      console.log(res);
+      console.log(res.data);
     };
     return (
         <div className="App">
           <SDivTop>
             <div className='snoopy'>
               <img src={snoopy}></img>
-              <animated.div style={styles}>I will fade in and out</animated.div>
             </div>
             <div className='mysummary'>
               <h1>IT Engineer</h1>

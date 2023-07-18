@@ -6,17 +6,6 @@ import { Header } from './Header';
 import axios from 'axios';
 
 export const Top = () => {
-    const getData = async () => {
-      const res = await axios.get("https://jmavkaw0w5.execute-api.ap-northeast-1.amazonaws.com/prod/getdata")
-      console.log(res.data);
-    };
-    const postData = async () => {
-      const res = await axios.post("https://945ak6zkp7.execute-api.ap-northeast-1.amazonaws.com/prod/postdata",{
-        firstName: "三郎",
-        lastName: "田中"
-      });
-      console.log(res.data);
-    };
     return (
         <div className="App">
           <SDivTop>
@@ -32,7 +21,6 @@ export const Top = () => {
               </p>
             </div>
           </SDivTop>
-        <button onClick={postData}>click</button>
         </div>
       );
 };

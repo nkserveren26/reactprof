@@ -45,24 +45,3 @@ export const Header:FC<HeaderProps> = (props) => {
       </ThemeProvider>
     );
 };
-
-const SDiv = styled.div`
-display:flex;
-align-items: center;
-background-color: black;
-font-family: Georgia, serif;
-h1 {
-  margin-left: 2%;
-  color: white;
-}
-ul {
-  display: flex;
-  list-style:none;
-  margin-left:30%;
-  color: white;
-  li {
-    margin-left:40px;
-    font-size: 18px;
-  }
-}
-`;

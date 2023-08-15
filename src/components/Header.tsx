@@ -15,7 +15,7 @@ export const Header:FC<HeaderProps> = (props) => {
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h4" component="div" fontFamily="Georgia">
-            My Profile
+            {title}
           </Typography>
           <Button color="inherit">
             Hoge

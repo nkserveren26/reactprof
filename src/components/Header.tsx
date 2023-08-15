@@ -1,5 +1,6 @@
 import { FC } from "react";
 import styled from "styled-components";
+import { Box } from "@mui/material";
 import { AppBar } from "@mui/material";
 import { Toolbar } from "@mui/material";
 import {Typography} from "@mui/material";
@@ -12,16 +13,18 @@ type HeaderProps = {
 export const Header:FC<HeaderProps> = (props) => {
     const { title } = props; 
     return (
+      <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-          <Typography variant="h4" component="div" fontFamily="Georgia">
+            <Typography variant="h4" component="div" fontFamily="Georgia" sx={{ flexGrow: 1 }}>
             {title}
           </Typography>
           <Button color="inherit">
-            Hoge
+            ABOUT
           </Button>
         </Toolbar>
       </AppBar>
+      </Box>
     );
 };
 

@@ -2,6 +2,7 @@ import { FC } from "react";
 import styled from "styled-components";
 import { AppBar } from "@mui/material";
 import { Toolbar } from "@mui/material";
+import {Typography} from "@mui/material";
 import { Button } from "@mui/material";
 
 type HeaderProps = {
@@ -13,6 +14,9 @@ export const Header:FC<HeaderProps> = (props) => {
     return (
       <AppBar position="static">
         <Toolbar>
+          <Typography variant="h4" component="div" fontFamily="Georgia">
+            My Profile
+          </Typography>
           <Button color="inherit">
             Hoge
           </Button>

@@ -36,6 +36,9 @@ export const Header:FC<HeaderProps> = (props) => {
               <Button color="inherit" component={Link} to="/about">
                 ABOUT
               </Button>
+              <Button color="inherit" component={Link} to="/">
+                TOP
+              </Button>
             </Toolbar>
           </AppBar>
         </Box>

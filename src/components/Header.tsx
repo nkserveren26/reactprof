@@ -5,6 +5,13 @@ import { AppBar } from "@mui/material";
 import { Toolbar } from "@mui/material";
 import {Typography} from "@mui/material";
 import { Button } from "@mui/material";
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+const theme = createTheme({
+  typography: {
+    fontFamily: "Georgia",
+  },
+});
 
 type HeaderProps = {
     title:string
@@ -13,10 +20,12 @@ type HeaderProps = {
 export const Header:FC<HeaderProps> = (props) => {
     const { title } = props; 
     return (
-      <Box sx={{ flexGrow: 1 }}>
+      <ThemeProvider theme={theme}>
+      <Box
+        sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-            <Typography variant="h4" component="div" fontFamily="Georgia" sx={{ flexGrow: 1 }}>
+            <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
             {title}
           </Typography>
           <Button color="inherit">
@@ -25,6 +34,7 @@ export const Header:FC<HeaderProps> = (props) => {
         </Toolbar>
       </AppBar>
       </Box>
+      </ThemeProvider>
     );
 };
 

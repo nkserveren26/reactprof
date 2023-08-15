@@ -6,6 +6,7 @@ import {Typography} from "@mui/material";
 import { Button } from "@mui/material";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Link } from "react-router-dom";
+import { ButtonParam } from "./interfaces";
 
 const theme = createTheme({
   palette: {
@@ -18,7 +19,7 @@ const theme = createTheme({
   },
 });
 
-const buttonParams = [
+const buttonParams: ButtonParam[] = [
   {
     buttonLabel: "ABOUT",
     path:"/about",
@@ -44,10 +45,10 @@ export const Header:FC<HeaderProps> = (props) => {
                 {title}
               </Typography>
               {buttonParams.map((buttonParam) => {
-                
+                const {buttonLabel, path} = buttonParam;
                 return (
-                  <Button color="inherit" component={Link} to={buttonParam.path}>
-                    {buttonParam.buttonLabel}
+                  <Button color="inherit" component={Link} to={path}>
+                    {buttonLabel}
                   </Button>
                 )
               })}

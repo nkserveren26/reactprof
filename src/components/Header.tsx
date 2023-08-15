@@ -1,5 +1,4 @@
 import { FC } from "react";
-import styled from "styled-components";
 import { Box } from "@mui/material";
 import { AppBar } from "@mui/material";
 import { Toolbar } from "@mui/material";
@@ -19,6 +18,17 @@ const theme = createTheme({
   },
 });
 
+const buttonParams = [
+  {
+    buttonLabel: "ABOUT",
+    path:"/about",
+  },
+  {
+    buttonLabel: "TOP",
+    path: "/",
+  },
+];
+
 type HeaderProps = {
     title:string
 };
@@ -30,15 +40,17 @@ export const Header:FC<HeaderProps> = (props) => {
         <Box sx={{ flexGrow: 1 }}>
           <AppBar position="static">
             <Toolbar disableGutters={true}>
-                <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
+              <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
                 {title}
               </Typography>
-              <Button color="inherit" component={Link} to="/about">
-                ABOUT
-              </Button>
-              <Button color="inherit" component={Link} to="/">
-                TOP
-              </Button>
+              {buttonParams.map((buttonParam) => {
+                
+                return (
+                  <Button color="inherit" component={Link} to={buttonParam.path}>
+                    {buttonParam.buttonLabel}
+                  </Button>
+                )
+              })}
             </Toolbar>
           </AppBar>
         </Box>

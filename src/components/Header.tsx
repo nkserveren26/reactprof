@@ -1,5 +1,8 @@
 import { FC } from "react";
 import styled from "styled-components";
+import { AppBar } from "@mui/material";
+import { Toolbar } from "@mui/material";
+import { Button } from "@mui/material";
 
 type HeaderProps = {
     title:string
@@ -8,14 +11,13 @@ type HeaderProps = {
 export const Header:FC<HeaderProps> = (props) => {
     const { title } = props; 
     return (
-        <SDiv>
-            <h1>{title}</h1>
-            <ul>
-              <li>Top</li>
-              <li>About</li>
-              <li>Work</li>
-            </ul>
-        </SDiv>
+      <AppBar position="static">
+        <Toolbar>
+          <Button color="inherit">
+            Hoge
+          </Button>
+        </Toolbar>
+      </AppBar>
     );
 };
 

@@ -21,19 +21,18 @@ export const Header:FC<HeaderProps> = (props) => {
     const { title } = props; 
     return (
       <ThemeProvider theme={theme}>
-      <Box
-        sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
-        <Toolbar>
-            <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
-            {title}
-          </Typography>
-          <Button color="inherit">
-            ABOUT
-          </Button>
-        </Toolbar>
-      </AppBar>
-      </Box>
+        <Box sx={{ flexGrow: 1 }}>
+          <AppBar position="static">
+            <Toolbar>
+                <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
+                {title}
+              </Typography>
+              <Button color="inherit">
+                ABOUT
+              </Button>
+            </Toolbar>
+          </AppBar>
+        </Box>
       </ThemeProvider>
     );
 };

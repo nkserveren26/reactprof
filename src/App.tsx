@@ -9,10 +9,10 @@ import Box from '@mui/material/Box';
 function App() {
   return (
     <div className="App">
-      <Header title='My Profile' />
       <Box sx={{ backgroundColor: 'black', }}>
         <SDiv>
       <BrowserRouter>
+        <Header title='My Profile' />
         <Routes>
           <Route path="/" element={<Top />}>
           </Route>

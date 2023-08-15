@@ -6,8 +6,14 @@ import { Toolbar } from "@mui/material";
 import {Typography} from "@mui/material";
 import { Button } from "@mui/material";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { Link } from "react-router-dom";
 
 const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#000000', // プライマリカラーを黒色に指定
+    },
+  },
   typography: {
     fontFamily: "Georgia",
   },
@@ -23,11 +29,11 @@ export const Header:FC<HeaderProps> = (props) => {
       <ThemeProvider theme={theme}>
         <Box sx={{ flexGrow: 1 }}>
           <AppBar position="static">
-            <Toolbar>
+            <Toolbar disableGutters={true}>
                 <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
                 {title}
               </Typography>
-              <Button color="inherit">
+              <Button color="inherit" component={Link} to="/about">
                 ABOUT
               </Button>
             </Toolbar>

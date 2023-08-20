@@ -15,9 +15,13 @@ import react from "../img/react.jpg";
 import vue from "../img/vue.jpg";
 import { Profile } from "./Profile";
 import { Skillset } from "./Skillset";
+import { CertificationList } from "./CertificationList";
 
 export const About = () => {
-    const awsCertifications: string[] = ["SAA", "DVA"];
+    const awsCertifications: string[] = [
+        "AWS Certified Solutions Architect - Associate", 
+        "AWS Certified Developer - Associate"
+    ];
     return (
         <>
         <Profile />
@@ -34,11 +38,7 @@ export const About = () => {
                                     </Typography>
                                 </CardContent>
                                 <CardContent>
-                                    <SDivFlex>
-                                        <Avatar alt="windowsserver" src={windowsserver} sx={{ width: 100, height: 120 }} variant="square" />
-                                        <Avatar alt="centos" src={centos} sx={{ width: 100, height: 110 }} variant="square" />
-                                        <Avatar alt="ubuntu" src={ubuntu} sx={{ width: 100, height: 80 }} variant="square" />
-                                    </SDivFlex>
+                                    <CertificationList list={awsCertifications} />
                                 </CardContent>
                             </Card>
                         </Grid>

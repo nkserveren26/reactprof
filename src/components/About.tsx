@@ -17,6 +17,7 @@ import { Profile } from "./Profile";
 import { Skillset } from "./Skillset";
 
 export const About = () => {
+    const awsCertifications: string[] = ["SAA", "DVA"];
     return (
         <>
         <Profile />

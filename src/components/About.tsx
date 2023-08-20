@@ -12,6 +12,7 @@ import python from "../img/python.jpg";
 import javascript from "../img/javascript.jpg";
 import typescript from "../img/typescript.jpg";
 import react from "../img/react.jpg";
+import vue from "../img/vue.jpg";
 import { Profile } from "./Profile";
 
 export const About = () => {
@@ -81,7 +82,7 @@ export const About = () => {
                         <CardContent>
                             <SDivFlex>
                                 <Avatar alt="react" src={react} sx={{ width: 130, height: 120 }} variant="square" />
-                                <Avatar alt="typescript" src={typescript} sx={{ width: 100, height: 70 }} variant="square" />
+                                <Avatar alt="vue" src={vue} sx={{ width: 120, height: 100 }} variant="square" />
                             </SDivFlex>
                         </CardContent>
                     </Card>

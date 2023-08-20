@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import CakeIcon from '@mui/icons-material/Cake';
-import BloodtypeIcon from '@mui/icons-material/Bloodtype';
 import { CardContent, Grid, Typography,Avatar } from "@mui/material";
 import { Card } from "@mui/material";
 import windowsserver from "../img/windowsserver.jpg";
@@ -76,7 +74,7 @@ export const About = () => {
                     <Card>
                         <CardContent>
                             <Typography align="center" variant="h4">
-                                Web Page
+                                Frontend
                             </Typography>
                         </CardContent>
                         <CardContent>

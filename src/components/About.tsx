@@ -23,6 +23,26 @@ export const About = () => {
         <Skillset />
         <SDiv>
             <h1>資格</h1>
+                <GridDiv>
+                    <Grid container spacing={4} columns={{ xs: 6, md: 8 }} alignItems='center' justifyContent='center'>
+                        <Grid item xs={6} md={4}>
+                            <Card>
+                                <CardContent>
+                                    <Typography align="center" variant="h4">
+                                        AWS
+                                    </Typography>
+                                </CardContent>
+                                <CardContent>
+                                    <SDivFlex>
+                                        <Avatar alt="windowsserver" src={windowsserver} sx={{ width: 100, height: 120 }} variant="square" />
+                                        <Avatar alt="centos" src={centos} sx={{ width: 100, height: 110 }} variant="square" />
+                                        <Avatar alt="ubuntu" src={ubuntu} sx={{ width: 100, height: 80 }} variant="square" />
+                                    </SDivFlex>
+                                </CardContent>
+                            </Card>
+                        </Grid>
+                    </Grid>
+                </GridDiv>
         </SDiv>
         </>
     );
@@ -36,4 +56,17 @@ h1 {
     text-align: center;
     margin: 0;
 }
+`;
+
+const GridDiv = styled.div`
+padding-left: 5%;
+padding-right: 5%;
+`;
+
+const SDivFlex = styled.div`
+display: flex;
+flex-basis: 50px;
+gap: 20px 20px;
+padding: 0px;
+justify-content: center;
 `;

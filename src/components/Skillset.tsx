@@ -105,8 +105,8 @@ h1 {
 `;
 
 const GridDiv = styled.div`
-padding-left: 70px;
-padding-right: 70px;
+padding-left: 5%;
+padding-right: 5%;
 `;
 
 const SDivFlex = styled.div`

@@ -11,6 +11,7 @@ import java from "../img/java.jpg";
 import python from "../img/python.jpg";
 import javascript from "../img/javascript.jpg";
 import typescript from "../img/typescript.jpg";
+import react from "../img/react.jpg";
 import { Profile } from "./Profile";
 
 export const About = () => {
@@ -79,9 +80,7 @@ export const About = () => {
                         </CardContent>
                         <CardContent>
                             <SDivFlex>
-                                <Avatar alt="java" src={java} sx={{ width: 100, height: 120 }} variant="square" />
-                                <Avatar alt="python" src={python} sx={{ width: 100, height: 100 }} variant="square" />
-                                <Avatar alt="javascript" src={javascript} sx={{ width: 100, height: 80 }} variant="square" />
+                                <Avatar alt="react" src={react} sx={{ width: 130, height: 120 }} variant="square" />
                                 <Avatar alt="typescript" src={typescript} sx={{ width: 100, height: 70 }} variant="square" />
                             </SDivFlex>
                         </CardContent>

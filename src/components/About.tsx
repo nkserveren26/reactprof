@@ -37,14 +37,14 @@ export const About = () => {
                     <Grid container spacing={4} columns={{ xs: 6, md: 8 }} alignItems='center' justifyContent='center'>
                         <Grid item xs={6} md={4}>
                             <Card>
-                                <HogeCard>
+                                <CardContent>
                                     <Typography align="center" variant="h4">
                                         AWS
                                     </Typography>
-                                </HogeCard>
-                                <HogeCard>
+                                </CardContent>
+                                <CardContent>
                                     <CertificationList list={awsCertifications} />
-                                </HogeCard>
+                                </CardContent>
                             </Card>
                         </Grid>
                     </Grid>
@@ -70,10 +70,6 @@ padding-left: 5%;
 padding-right: 5%;
 `;
 
-const HogeCard = styled(CardContent)`
-padding: 0;
-padding-bottom: 0;
-`
 
 const SDivFlex = styled.div`
 display: flex;

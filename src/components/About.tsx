@@ -28,6 +28,7 @@ export const About = () => {
     ];
     return (
         <>
+        <ThemeProvider theme={theme}>
         <Profile />
         <Skillset />
         <SDiv>
@@ -49,6 +50,7 @@ export const About = () => {
                     </Grid>
                 </GridDiv>
         </SDiv>
+        </ThemeProvider>
         </>
     );
 };

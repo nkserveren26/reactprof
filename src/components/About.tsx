@@ -26,6 +26,10 @@ export const About = () => {
         "AWS Certified Solutions Architect - Associate", 
         "AWS Certified Developer - Associate"
     ];
+    const programmingCertifications: string[] = [
+        "Oracle Certified Java Programmer, Silver SE 8",
+        "Oracle Certified Java Programmer, Gold SE 8"
+    ];
     return (
         <>
         <ThemeProvider theme={theme}>
@@ -47,6 +51,18 @@ export const About = () => {
                                 </CardContent>
                             </Card>
                         </Grid>
+                            <Grid item xs={6} md={4}>
+                                <Card>
+                                    <CardContent>
+                                        <Typography align="center" variant="h4">
+                                            Programming
+                                        </Typography>
+                                    </CardContent>
+                                    <CardContent>
+                                        <CertificationList list={programmingCertifications} />
+                                    </CardContent>
+                                </Card>
+                            </Grid>
                     </Grid>
                 </GridDiv>
         </SDiv>

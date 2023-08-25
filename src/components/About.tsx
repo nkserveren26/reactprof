@@ -35,8 +35,8 @@ export const About = () => {
         "ORACLE MASTER Silver DBA 2019"
     ];
     const otherCertifications: string[] = [
-        "ORACLE MASTER Bronze DBA 2019",
-        "ORACLE MASTER Silver DBA 2019"
+        "応用情報技術者",
+        "LinuCレベル1 Version 10.0"
     ];
 
     return (
@@ -92,7 +92,7 @@ export const About = () => {
                                         </Typography>
                                     </CardContent>
                                     <CardContent>
-                                        <CertificationList list={databaseCertifications} />
+                                        <CertificationList list={otherCertifications} />
                                     </CardContent>
                                 </Card>
                             </Grid>

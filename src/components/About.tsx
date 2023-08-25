@@ -34,6 +34,11 @@ export const About = () => {
         "ORACLE MASTER Bronze DBA 2019",
         "ORACLE MASTER Silver DBA 2019"
     ];
+    const otherCertifications: string[] = [
+        "ORACLE MASTER Bronze DBA 2019",
+        "ORACLE MASTER Silver DBA 2019"
+    ];
+
     return (
         <>
         <ThemeProvider theme={theme}>
@@ -72,6 +77,18 @@ export const About = () => {
                                     <CardContent>
                                         <Typography align="center" variant="h4">
                                             Database
+                                        </Typography>
+                                    </CardContent>
+                                    <CardContent>
+                                        <CertificationList list={databaseCertifications} />
+                                    </CardContent>
+                                </Card>
+                            </Grid>
+                            <Grid item xs={6} md={4}>
+                                <Card>
+                                    <CardContent>
+                                        <Typography align="center" variant="h4">
+                                            Other
                                         </Typography>
                                     </CardContent>
                                     <CardContent>

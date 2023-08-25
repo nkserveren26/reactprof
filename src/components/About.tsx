@@ -75,7 +75,7 @@ export const About = () => {
                                         </Typography>
                                     </CardContent>
                                     <CardContent>
-                                        <CertificationList list={programmingCertifications} />
+                                        <CertificationList list={databaseCertifications} />
                                     </CardContent>
                                 </Card>
                             </Grid>

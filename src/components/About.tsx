@@ -21,24 +21,24 @@ const theme = createTheme({
     },
 });
 
-export const About = () => {
-    const awsCertifications: string[] = [
-        "AWS Certified Solutions Architect - Associate", 
-        "AWS Certified Developer - Associate"
-    ];
-    const programmingCertifications: string[] = [
-        "Oracle Certified Java Programmer, Silver SE 8",
-        "Oracle Certified Java Programmer, Gold SE 8"
-    ];
-    const databaseCertifications: string[] = [
-        "ORACLE MASTER Bronze DBA 2019",
-        "ORACLE MASTER Silver DBA 2019"
-    ];
-    const otherCertifications: string[] = [
-        "応用情報技術者",
-        "LinuCレベル1 Version 10.0"
-    ];
+const awsCertifications: string[] = [
+    "AWS Certified Solutions Architect - Associate",
+    "AWS Certified Developer - Associate"
+];
+const programmingCertifications: string[] = [
+    "Oracle Certified Java Programmer, Silver SE 8",
+    "Oracle Certified Java Programmer, Gold SE 8"
+];
+const databaseCertifications: string[] = [
+    "ORACLE MASTER Bronze DBA 2019",
+    "ORACLE MASTER Silver DBA 2019"
+];
+const otherCertifications: string[] = [
+    "応用情報技術者",
+    "LinuCレベル1 Version 10.0"
+];
 
+export const About = () => {
     return (
         <>
         <ThemeProvider theme={theme}>

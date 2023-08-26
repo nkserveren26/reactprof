@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import background from "../img/IMG_4871.jpg";
-import snoopy from "../img/IMG_7330.jpg"
+import background from "../../img/IMG_4871.jpg";
+import snoopy from "../../img/IMG_7330.jpg"
 
 export const Top = () => {
     return (

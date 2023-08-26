@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import { CardContent, Grid, Typography, } from "@mui/material";
 import { Card } from "@mui/material";
-import { Profile } from "./Profile";
-import { Skillset } from "./Skillset";
-import { CertificationList } from "./CertificationList";
+import { Profile } from "../Profile";
+import { Skillset } from "../Skillset";
+import { CertificationList } from "../CertificationList";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { CertificationCard } from "./CertificationCard";
-import { certificationCardProps } from "./interfaces";
+import { CertificationCard } from "../CertificationCard";
+import { certificationCardProps } from "../interfaces";
 
 const theme = createTheme({
     components: {

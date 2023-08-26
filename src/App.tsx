@@ -1,9 +1,8 @@
 import styled from 'styled-components';
-import background from "./img/IMG_4871.jpg";
 import { Header } from './components/Header';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { Top } from './components/Top';
-import { About } from './components/About';
+import { Top } from './components/pages/Top';
+import { About } from './components/pages/About';
 import Box from '@mui/material/Box';
 
 function App() {
@@ -15,6 +14,8 @@ function App() {
         <Header title='N.K Portfolio' />
         <Routes>
           <Route path="/" element={<Top />}>
+          </Route>
+          <Route path="/about" element={<About />}>
           </Route>
           <Route path="/about" element={<About />}>
           </Route>

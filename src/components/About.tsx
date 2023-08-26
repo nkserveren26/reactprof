@@ -42,8 +42,20 @@ const otherCertifications: string[] = [
 
 const certCardProps: certificationCardProps[] = [
     {
+        categoryName: "AWS",
+        certificationList: awsCertifications,
+    },
+    {
         categoryName: "Programming",
         certificationList: programmingCertifications,
+    },
+    {
+        categoryName: "Database",
+        certificationList: databaseCertifications,
+    },
+    {
+        categoryName: "Other",
+        certificationList: otherCertifications,
     },
 ];
 

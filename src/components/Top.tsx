@@ -1,9 +1,6 @@
 import styled from 'styled-components';
-import { useSpring, animated } from 'react-spring'
 import background from "../img/IMG_4871.jpg";
 import snoopy from "../img/IMG_7330.jpg"
-import { Header } from './Header';
-import axios from 'axios';
 
 export const Top = () => {
     return (

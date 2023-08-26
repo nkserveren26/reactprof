@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Top } from './components/pages/Top';
 import { About } from './components/pages/About';
 import Box from '@mui/material/Box';
+import { Experience } from './components/pages/Experience';
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
           </Route>
           <Route path="/about" element={<About />}>
           </Route>
-          <Route path="/about" element={<About />}>
+          <Route path="/experience" element={<Experience />}>
           </Route>
         </Routes>
       </BrowserRouter>

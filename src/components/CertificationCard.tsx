@@ -3,7 +3,7 @@ import { CardContent, Typography, } from "@mui/material";
 import { CertificationList } from "./CertificationList";
 import { certificationCardProps } from "./interfaces";
 
-export const CertificationCard = (props: certificationCardProps) => {
+export const CertificationCard = ({props}: {props: certificationCardProps}) => {
     const {categoryName, certificationList} = props;
     return (
         <>

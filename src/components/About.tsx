@@ -5,6 +5,8 @@ import { Profile } from "./Profile";
 import { Skillset } from "./Skillset";
 import { CertificationList } from "./CertificationList";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { CertificationCard } from "./CertificationCard";
+import { certificationCardProps } from "./interfaces";
 
 const theme = createTheme({
     components: {
@@ -38,6 +40,13 @@ const otherCertifications: string[] = [
     "LinuCレベル1 Version 10.0"
 ];
 
+const certCardProps: certificationCardProps[] = [
+    {
+        categoryName: "Programming",
+        certificationList: programmingCertifications,
+    },
+];
+
 export const About = () => {
     return (
         <>
@@ -61,16 +70,7 @@ export const About = () => {
                             </Card>
                         </Grid>
                             <Grid item xs={6} md={4}>
-                                <Card>
-                                    <CardContent>
-                                        <Typography align="center" variant="h4">
-                                            Programming
-                                        </Typography>
-                                    </CardContent>
-                                    <CardContent>
-                                        <CertificationList list={programmingCertifications} />
-                                    </CardContent>
-                                </Card>
+                                <CertificationCard props={certCardProps[0]} />
                             </Grid>
                             <Grid item xs={6} md={4}>
                                 <Card>

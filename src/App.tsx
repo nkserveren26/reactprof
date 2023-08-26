@@ -12,7 +12,7 @@ function App() {
       <Box sx={{ backgroundColor: 'black', }}>
         <SDiv>
       <BrowserRouter>
-        <Header title='My Profile' />
+        <Header title='N.K Portfolio' />
         <Routes>
           <Route path="/" element={<Top />}>
           </Route>

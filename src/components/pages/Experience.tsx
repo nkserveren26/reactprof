@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 export const Experience = () => {
     return (
         <>
-         <Box sx={{
+        <Box sx={{
             height: 200,
             backgroundColor: 'white',
         }}>

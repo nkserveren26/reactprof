@@ -1,10 +1,11 @@
 import styled from "styled-components"
 import Box from '@mui/material/Box';
+import { Typography, } from "@mui/material";
 
 export const Experience = () => {
     return (
         <>
-        <Box sx={{
+        <Box m={0} sx={{
             height: 200,
             backgroundColor: 'white',
         }}>
@@ -13,6 +14,14 @@ export const Experience = () => {
             <p>株式会社シーエーシー - Server Side Engineer (2021/4 ~ 2022/7) </p>
             <p>ESRIジャパン株式会社 - Infrastructure Engineer (2018/4 ~ 2021/3) </p>
         </Box>
+            <Box sx={{
+                height: 200,
+                backgroundColor: 'white',
+            }}>
+                <Typography pl={2} variant="h4">
+                    工場の生産量可視化アプリの改修
+                </Typography>
+            </Box>
         </>
     )
 }

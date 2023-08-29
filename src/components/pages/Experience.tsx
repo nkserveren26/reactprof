@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import Box from '@mui/material/Box';
-import { Typography, } from "@mui/material";
+import { Card, CardContent, Typography, } from "@mui/material";
 
 export const Experience = () => {
     return (
@@ -18,9 +18,13 @@ export const Experience = () => {
                 height: 200,
                 backgroundColor: 'white',
             }}>
-                <Typography pl={2} variant="h4">
-                    工場の生産量可視化アプリの改修
-                </Typography>
+                <Card>
+                    <CardContent>
+                        <Typography pl={2} variant="h4">
+                            工場の生産量可視化アプリの改修
+                        </Typography>
+                    </CardContent>
+                </Card>
             </Box>
         </>
     )

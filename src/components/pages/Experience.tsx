@@ -26,6 +26,9 @@ export const Experience = () => {
                         <Typography pt={1} variant="h6">
                             ＜期間＞
                         </Typography>
+                        <Typography variant="body1">
+                            2023/4~2023/8
+                        </Typography>
                     </CardContent>
                 </Card>
             </Box>

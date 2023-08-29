@@ -20,6 +20,8 @@ export const Experience = () => {
                 height: 200,
                 backgroundColor: 'white',
             }}>
+                <Grid container alignItems="center" justifyContent="center">
+                <Grid item xs={11}>
                 <Card>
                     <CardContent>
                         <Typography pl={2} variant="h4">
@@ -39,6 +41,8 @@ export const Experience = () => {
                         </Typography>
                     </CardContent>
                 </Card>
+                </Grid>
+                </Grid>
             </Box>
         </>
     )

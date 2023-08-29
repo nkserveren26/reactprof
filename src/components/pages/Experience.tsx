@@ -23,6 +23,9 @@ export const Experience = () => {
                         <Typography pl={2} variant="h4">
                             工場の生産量可視化アプリの改修
                         </Typography>
+                        <Typography pt={1} variant="h6">
+                            ＜期間＞
+                        </Typography>
                     </CardContent>
                 </Card>
             </Box>

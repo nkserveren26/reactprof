@@ -29,6 +29,13 @@ export const Experience = () => {
                         <Typography variant="body1">
                             2023/4~2023/8
                         </Typography>
+                        <Typography pt={1} variant="h6">
+                            ＜概要＞
+                        </Typography>
+                        <Typography variant="body1">
+                            生産量可視化アプリの機能改善を行いました。
+                            フロントエンド、バックエンド両方の改修を担当。
+                        </Typography>
                     </CardContent>
                 </Card>
             </Box>

@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import Box from '@mui/material/Box';
-import { Card, CardContent, Typography, } from "@mui/material";
+import { Card, CardContent, Grid, Typography, } from "@mui/material";
 import { Multiline } from "../Multiline";
 
 export const Experience = () => {

@@ -1,8 +1,10 @@
 import styled from "styled-components"
 import Box from '@mui/material/Box';
 import { Card, CardContent, Typography, } from "@mui/material";
+import { Multiline } from "../Multiline";
 
 export const Experience = () => {
+    const summary = "生産量可視化アプリの機能改善を行いました。\nフロントエンド、バックエンド両方の改修を担当。";
     return (
         <>
         <Box m={0} sx={{
@@ -33,8 +35,7 @@ export const Experience = () => {
                             ＜概要＞
                         </Typography>
                         <Typography variant="body1">
-                            生産量可視化アプリの機能改善を行いました。
-                            フロントエンド、バックエンド両方の改修を担当。
+                            <Multiline lines={summary}/>
                         </Typography>
                     </CardContent>
                 </Card>

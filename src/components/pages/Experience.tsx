@@ -21,8 +21,10 @@ export const Experience = () => {
                 backgroundColor: 'white',
             }}>
                 <Grid container alignItems="center" justifyContent="center">
-                <Grid item xs={10}>
-                <Card>
+                    <Grid item xs={10}>
+                        <Card sx={{
+                            border: '1px solid black', // 黒い外枠
+                        }}>
                     <CardContent>
                         <Typography pl={2} variant="h4">
                             工場の生産量可視化アプリの改修
@@ -52,7 +54,7 @@ export const Experience = () => {
                             Python、API Gateway、Lambda
                         </Typography>
                     </CardContent>
-                </Card>
+                    </Card>
                 </Grid>
                 </Grid>
             </Box>

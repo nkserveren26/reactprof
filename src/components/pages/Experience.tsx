@@ -1,7 +1,8 @@
 import styled from "styled-components"
 import Box from '@mui/material/Box';
-import { Card, CardContent, Grid, Typography, } from "@mui/material";
+import { Card, CardContent, CardMedia, Grid, Typography, } from "@mui/material";
 import { Multiline } from "../Multiline";
+import vmware from "../../img/factory_arch.jpg";
 
 export const Experience = () => {
     const summary = "生産量可視化アプリの機能改善を行いました。\nフロントエンド、バックエンド両方の改修を担当。";
@@ -29,6 +30,12 @@ export const Experience = () => {
                         <Typography pl={2} variant="h4">
                             工場の生産量可視化アプリの改修
                         </Typography>
+                                <CardMedia
+                                    component="img"
+                                    sx={{ width: 300 }}
+                                    src={vmware}
+                                    alt="Live from space album cover"
+                                />
                         <Typography pt={1} variant="h6">
                             ＜期間＞
                         </Typography>

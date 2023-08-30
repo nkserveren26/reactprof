@@ -45,6 +45,12 @@ export const Experience = () => {
                         <Typography variant="body1">
                             Vue.js、TypeScript、Amplify
                         </Typography>
+                        <Typography pt={1} variant="h6">
+                            ＜バックエンド＞
+                        </Typography>
+                        <Typography variant="body1">
+                            Python、API Gateway、Lambda
+                        </Typography>
                     </CardContent>
                 </Card>
                 </Grid>

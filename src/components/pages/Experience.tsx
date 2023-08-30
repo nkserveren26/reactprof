@@ -60,7 +60,3 @@ export const Experience = () => {
     )
 }
 
-const SDiv = styled.div`
-background-color: white;
-margin: 0;
-`;

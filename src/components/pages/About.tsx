@@ -130,12 +130,3 @@ const GridDiv = styled.div`
 padding-left: 5%;
 padding-right: 5%;
 `;
-
-
-const SDivFlex = styled.div`
-display: flex;
-flex-basis: 50px;
-gap: 20px 20px;
-padding: 0px;
-justify-content: center;
-`;

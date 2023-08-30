@@ -21,7 +21,7 @@ export const Experience = () => {
                 backgroundColor: 'white',
             }}>
                 <Grid container alignItems="center" justifyContent="center">
-                <Grid item xs={11}>
+                <Grid item xs={10}>
                 <Card>
                     <CardContent>
                         <Typography pl={2} variant="h4">
@@ -38,6 +38,12 @@ export const Experience = () => {
                         </Typography>
                         <Typography variant="body1">
                             <Multiline lines={summary}/>
+                        </Typography>
+                        <Typography pt={1} variant="h6">
+                            ＜フロントエンド＞
+                        </Typography>
+                        <Typography variant="body1">
+                            Vue.js、TypeScript、Amplify
                         </Typography>
                     </CardContent>
                 </Card>

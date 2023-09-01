@@ -30,7 +30,7 @@ export const Experience = () => {
                                 <Typography pl={2} variant="h4">
                                     工場の生産量可視化アプリの改修
                                 </Typography>
-                                <Box sx={{
+                                <Box pt={3} sx={{
                                     display: 'flex',
                                     justifyContent: "center"
                                 }}>

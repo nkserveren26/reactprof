@@ -36,7 +36,7 @@ export const Experience = () => {
                                 }}>
                                     <CardMedia
                                         component="img"
-                                        sx={{ width: 400 }}
+                                        sx={{ width: 350 }}
                                         src={vmware}
                                         alt="Live from space album cover"
                                     />

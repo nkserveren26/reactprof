@@ -40,7 +40,7 @@ export const Experience = () => {
                                         src={vmware}
                                         alt="Live from space album cover"
                                     />
-                                    <Box>
+                                    <Box pl={3}>
                                         <Typography pt={1} variant="h6">
                                             ＜期間＞
                                         </Typography>

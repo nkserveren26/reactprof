@@ -30,12 +30,14 @@ export const Experience = () => {
                         <Typography pl={2} variant="h4">
                             工場の生産量可視化アプリの改修
                         </Typography>
-                                <CardMedia
-                                    component="img"
-                                    sx={{ width: 300 }}
-                                    src={vmware}
-                                    alt="Live from space album cover"
-                                />
+                        <Box sx={{display: 'flex'}}>
+                            <CardMedia
+                                component="img"
+                                sx={{ width: 300 }}
+                                src={vmware}
+                                alt="Live from space album cover"
+                            />
+                            <Box>
                         <Typography pt={1} variant="h6">
                             ＜期間＞
                         </Typography>
@@ -60,6 +62,8 @@ export const Experience = () => {
                         <Typography variant="body1">
                             Python、API Gateway、Lambda
                         </Typography>
+                                    </Box>
+                                </Box>
                     </CardContent>
                     </Card>
                 </Grid>

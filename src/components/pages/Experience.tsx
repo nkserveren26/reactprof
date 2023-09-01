@@ -1,19 +1,10 @@
-import styled from "styled-components"
+import styled, { ThemeProvider } from "styled-components"
 import Box from '@mui/material/Box';
 import { Card, CardContent, CardMedia, Grid, Typography, createTheme, } from "@mui/material";
 import { Multiline } from "../Multiline";
 import vmware from "../../img/factory_arch.jpg";
 
-const theme = createTheme({
-    palette: {
-        primary: {
-            main: '#000000', // プライマリカラーを黒色に指定
-        },
-    },
-    typography: {
-        fontFamily: "Georgia",
-    },
-});
+
 
 export const Experience = () => {
     const summary = "生産量可視化アプリの機能改善を行いました。\nフロントエンド、バックエンド両方の改修を担当。";
@@ -27,6 +18,7 @@ export const Experience = () => {
             <p>株式会社KYOSO - AWS Enginner (2022/8 ~ 現在) </p>
             <p>株式会社シーエーシー - Server Side Engineer (2021/4 ~ 2022/7) </p>
             <p>ESRIジャパン株式会社 - Infrastructure Engineer (2018/4 ~ 2021/3) </p>
+            
         </Box>
             <Box sx={{
                 height: 200,
@@ -38,7 +30,11 @@ export const Experience = () => {
                             border: '1px solid black', // 黒い外枠
                         }}>
                             <CardContent>
-                                <Typography pl={2} variant="h4">
+                                <Typography pl={2} variant="h4" sx={{ 
+                                    fontFamily: "Roboto",
+                                    fontWeight: "Bold",
+                                    color: "#4169e1",
+                                 }}>
                                     工場の生産量可視化アプリの改修
                                 </Typography>
                                 <Box pt={3} sx={{

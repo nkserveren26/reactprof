@@ -26,46 +26,46 @@ export const Experience = () => {
                         <Card sx={{
                             border: '1px solid black', // 黒い外枠
                         }}>
-                    <CardContent>
-                        <Typography pl={2} variant="h4">
-                            工場の生産量可視化アプリの改修
-                        </Typography>
-                        <Box sx={{display: 'flex'}}>
-                            <CardMedia
-                                component="img"
-                                sx={{ width: 300 }}
-                                src={vmware}
-                                alt="Live from space album cover"
-                            />
-                            <Box>
-                        <Typography pt={1} variant="h6">
-                            ＜期間＞
-                        </Typography>
-                        <Typography variant="body1">
-                            2023/4~2023/8
-                        </Typography>
-                        <Typography pt={1} variant="h6">
-                            ＜概要＞
-                        </Typography>
-                        <Typography variant="body1">
-                            <Multiline lines={summary}/>
-                        </Typography>
-                        <Typography pt={1} variant="h6">
-                            ＜フロントエンド＞
-                        </Typography>
-                        <Typography variant="body1">
-                            Vue.js、TypeScript、Amplify
-                        </Typography>
-                        <Typography pt={1} variant="h6">
-                            ＜バックエンド＞
-                        </Typography>
-                        <Typography variant="body1">
-                            Python、API Gateway、Lambda
-                        </Typography>
+                            <CardContent>
+                                <Typography pl={2} variant="h4">
+                                    工場の生産量可視化アプリの改修
+                                </Typography>
+                                <Box sx={{display: 'flex'}}>
+                                    <CardMedia
+                                        component="img"
+                                        sx={{ width: 300 }}
+                                        src={vmware}
+                                        alt="Live from space album cover"
+                                    />
+                                    <Box>
+                                        <Typography pt={1} variant="h6">
+                                            ＜期間＞
+                                        </Typography>
+                                        <Typography variant="body1">
+                                            2023/4~2023/8
+                                        </Typography>
+                                        <Typography pt={1} variant="h6">
+                                            ＜概要＞
+                                        </Typography>
+                                        <Typography variant="body1">
+                                            <Multiline lines={summary}/>
+                                        </Typography>
+                                        <Typography pt={1} variant="h6">
+                                            ＜フロントエンド＞
+                                        </Typography>
+                                        <Typography variant="body1">
+                                            Vue.js、TypeScript、Amplify
+                                        </Typography>
+                                        <Typography pt={1} variant="h6">
+                                            ＜バックエンド＞
+                                        </Typography>
+                                        <Typography variant="body1">
+                                            Python、API Gateway、Lambda
+                                        </Typography>
                                     </Box>
                                 </Box>
-                    </CardContent>
-                    </Card>
+                            </CardContent>
+                        </Card>
                 </Grid>
                 </Grid>
             </Box>

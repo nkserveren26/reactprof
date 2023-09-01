@@ -1,8 +1,19 @@
 import styled from "styled-components"
 import Box from '@mui/material/Box';
-import { Card, CardContent, CardMedia, Grid, Typography, } from "@mui/material";
+import { Card, CardContent, CardMedia, Grid, Typography, createTheme, } from "@mui/material";
 import { Multiline } from "../Multiline";
 import vmware from "../../img/factory_arch.jpg";
+
+const theme = createTheme({
+    palette: {
+        primary: {
+            main: '#000000', // プライマリカラーを黒色に指定
+        },
+    },
+    typography: {
+        fontFamily: "Georgia",
+    },
+});
 
 export const Experience = () => {
     const summary = "生産量可視化アプリの機能改善を行いました。\nフロントエンド、バックエンド両方の改修を担当。";

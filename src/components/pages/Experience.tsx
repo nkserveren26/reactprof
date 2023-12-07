@@ -1,8 +1,8 @@
-import styled, { ThemeProvider } from "styled-components"
 import Box from '@mui/material/Box';
 import { Card, CardContent, CardMedia, Grid, Typography, createTheme, } from "@mui/material";
 import { Multiline } from "../Multiline";
 import vmware from "../../img/factory_arch.jpg";
+import BusinessIcon from '@mui/icons-material/Business';
 
 
 
@@ -15,7 +15,10 @@ export const Experience = () => {
             backgroundColor: 'white',
         }}>
             <h2>COMPANY</h2>
-            <p>株式会社KYOSO - AWS Enginner (2022/8 ~ 現在) </p>
+            <Box display="flex">
+                <BusinessIcon fontSize="large" />
+                <Typography variant="h6" paddingLeft={1}>株式会社KYOSO - AWS Enginner (2022/8 ~ 現在) </Typography>
+            </Box>
             <p>株式会社シーエーシー - Server Side Engineer (2021/4 ~ 2022/7) </p>
             <p>ESRIジャパン株式会社 - Infrastructure Engineer (2018/4 ~ 2021/3) </p>
             

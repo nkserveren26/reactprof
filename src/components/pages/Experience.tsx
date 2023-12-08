@@ -11,7 +11,7 @@ const companyNameList: string[] = [
     "ESRIジャパン株式会社 - Infrastructure Engineer(2018 / 4 ~2021 / 3)"
 ]
 
-const summary = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+const summary = "紡績工場の生産量を可視化するダッシュボード画面を作成。";
 
 
 export const Experience = () => {
@@ -67,7 +67,7 @@ export const Experience = () => {
                             />
                             <CardContent>
                                 <Typography paddingBottom={1} fontWeight="bold" variant="h6" >
-                                    工場の生産量可視化アプリの改修
+                                    紡績工場の生産量可視化ダッシュボード画面の作成
                                 </Typography>
                                 <Typography >
                                     2023/04 - 2023/08
@@ -75,7 +75,7 @@ export const Experience = () => {
                             </CardContent>
                         </Card>
                         <Dialog open={open} onClose={handleClose}>
-                            <DialogTitle fontWeight="bold">工場の生産量可視化アプリの改修</DialogTitle>
+                            <DialogTitle fontWeight="bold">紡績工場の生産量可視化ダッシュボード画面の作成</DialogTitle>
                             <DialogContent>
                                 <DialogContentText style={{ color: 'black' }}>
                                     <Typography pt={1} fontWeight="bold" variant="subtitle1">
@@ -102,11 +102,17 @@ export const Experience = () => {
                                     <Typography variant="body1">
                                         Python、API Gateway、Lambda
                                     </Typography>
-                                    <Typography pt={1} fontWeight="bold" variant="subtitle1">
+                                    <Typography pt={2} fontWeight="bold" variant="subtitle1">
                                         ◆Database
                                     </Typography>
                                     <Typography variant="body1">
                                         DynamoDB
+                                    </Typography>
+                                    <Typography pt={2} fontWeight="bold" variant="subtitle1">
+                                        ◆Version Control Tool
+                                    </Typography>
+                                    <Typography variant="body1">
+                                        Git
                                     </Typography>
                                 </DialogContentText>
                             </DialogContent>

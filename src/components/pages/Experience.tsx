@@ -15,14 +15,25 @@ export const Experience = () => {
     const summary = "生産量可視化アプリの機能改善を行いました。\nフロントエンド、バックエンド両方の改修を担当。";
     return (
         <>
-        <Box m={0} sx={{
+        <Box 
+            display="flex" 
+            flexDirection="column"
+            alignItems="center"
+            justifyContent="center"
+            m={0} sx={{
             height: 200,
             backgroundColor: 'white',
         }}>
-            <Typography variant="h4" textAlign="center">COMPANY</Typography>
+            <Typography variant="h4">COMPANY</Typography>
+            <Box
+                display="flex"
+                flexDirection="column"
+                alignItems="left"
+            >
             {companyNameList.map((companyName, index) => (
                 <CompanyItem key={index} companyName={companyName} />
             ))}
+            </Box>
             
         </Box>
             <Box sx={{

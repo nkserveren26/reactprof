@@ -5,8 +5,8 @@ import vmware from "../../img/factory_arch.jpg";
 import { CompanyItem } from '../CompanyItem';
 
 const companyNameList: string[] = [
-    "株式会社KYOSO - AWS Enginner (2022/8 ~ 現在)",
-    "株式会社シーエーシー - Server Side Engineer (2021/4 ~ 2022/7)",
+    "株式会社KYOSO - AWS Enginner & Developer (2022/8 ~ 現在)",
+    "株式会社シーエーシー - Developer (2021/4 ~ 2022/7)",
     "ESRIジャパン株式会社 - Infrastructure Engineer(2018 / 4 ~2021 / 3)"
 ]
 
@@ -24,15 +24,15 @@ export const Experience = () => {
             height: 200,
             backgroundColor: 'white',
         }}>
-            <Typography variant="h4">COMPANY</Typography>
+            <Typography paddingBottom={1} fontWeight="bold" variant="h4">COMPANY</Typography>
             <Box
                 display="flex"
                 flexDirection="column"
                 alignItems="left"
             >
-            {companyNameList.map((companyName, index) => (
-                <CompanyItem key={index} companyName={companyName} />
-            ))}
+                {companyNameList.map((companyName, index) => (
+                    <CompanyItem key={index} companyName={companyName} />
+                ))}
             </Box>
             
         </Box>

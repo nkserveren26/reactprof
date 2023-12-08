@@ -19,9 +19,9 @@ export const Experience = () => {
             height: 200,
             backgroundColor: 'white',
         }}>
-            <h2>COMPANY</h2>
+            <Typography variant="h4" textAlign="center">COMPANY</Typography>
             {companyNameList.map((companyName, index) => (
-                <CompanyItem companyName={companyName} />
+                <CompanyItem key={index} companyName={companyName} />
             ))}
             
         </Box>

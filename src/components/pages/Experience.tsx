@@ -1,8 +1,9 @@
 import Box from '@mui/material/Box';
-import { Card, CardContent, CardMedia, Grid, Typography } from "@mui/material";
-import { Multiline } from "../Multiline";
-import vmware from "../../img/factory_arch.jpg";
+import { Button, Card, CardActions, CardContent, CardMedia, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Grid, Typography } from "@mui/material";
 import { CompanyItem } from '../CompanyItem';
+import { useState } from 'react';
+import amplify from "../../img/Amplify.jpg";
+import { Multiline } from '../Multiline';
 
 const companyNameList: string[] = [
     "株式会社KYOSO - AWS Enginner & Developer (2022/8 ~ 現在)",
@@ -10,9 +11,20 @@ const companyNameList: string[] = [
     "ESRIジャパン株式会社 - Infrastructure Engineer(2018 / 4 ~2021 / 3)"
 ]
 
+const summary = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+
 
 export const Experience = () => {
-    const summary = "生産量可視化アプリの機能改善を行いました。\nフロントエンド、バックエンド両方の改修を担当。";
+    const [open, setOpen] = useState(false);
+
+    const handleOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
+
     return (
         <>
         <Box 
@@ -34,67 +46,77 @@ export const Experience = () => {
                     <CompanyItem key={index} companyName={companyName} />
                 ))}
             </Box>
-            
         </Box>
-            <Box sx={{
-                height: 200,
+        <Box
+            display="flex"
+            flexDirection="column"
+            alignItems="center"
+            justifyContent="center"
+            sx={{
+                height: 300,
                 backgroundColor: 'white',
-            }}>
-                <Grid container alignItems="center" justifyContent="center">
-                    <Grid item xs={10}>
-                        <Card sx={{
-                            border: '1px solid black', // 黒い外枠
-                        }}>
+            }}
+        >
+            <Typography paddingBottom={1} fontWeight="bold" variant="h4">Experiences</Typography>
+            <Grid container alignItems="center" justifyContent="center">
+            <Grid item xs={10}>
+                        <Card onClick={handleOpen} style={{ cursor: 'pointer' }} sx={{ maxWidth: 345 }}>
+                            <CardMedia
+                                sx={{ height: 160 }}
+                                image={amplify}
+                            />
                             <CardContent>
-                                <Typography pl={2} variant="h4" sx={{ 
-                                    fontFamily: "Roboto",
-                                    fontWeight: "Bold",
-                                    color: "#4169e1",
-                                 }}>
+                                <Typography paddingBottom={1} fontWeight="bold" variant="h6" >
                                     工場の生産量可視化アプリの改修
                                 </Typography>
-                                <Box pt={3} sx={{
-                                    display: 'flex',
-                                    justifyContent: "center"
-                                }}>
-                                    <CardMedia
-                                        component="img"
-                                        sx={{ width: 350 }}
-                                        src={vmware}
-                                        alt="Live from space album cover"
-                                    />
-                                    <Box pl={4}>
-                                        <Typography pt={1} variant="h6">
-                                            ＜期間＞
-                                        </Typography>
-                                        <Typography variant="body1">
-                                            2023/4~2023/8
-                                        </Typography>
-                                        <Typography pt={1} variant="h6">
-                                            ＜概要＞
-                                        </Typography>
-                                        <Typography variant="body1">
-                                            <Multiline lines={summary}/>
-                                        </Typography>
-                                        <Typography pt={1} variant="h6">
-                                            ＜フロントエンド＞
-                                        </Typography>
-                                        <Typography variant="body1">
-                                            Vue.js、TypeScript、Amplify
-                                        </Typography>
-                                        <Typography pt={1} variant="h6">
-                                            ＜バックエンド＞
-                                        </Typography>
-                                        <Typography variant="body1">
-                                            Python、API Gateway、Lambda
-                                        </Typography>
-                                    </Box>
-                                </Box>
+                                <Typography >
+                                    2023/04 - 2023/08
+                                </Typography>
                             </CardContent>
                         </Card>
-                </Grid>
-                </Grid>
-            </Box>
+                        <Dialog open={open} onClose={handleClose}>
+                            <DialogTitle fontWeight="bold">工場の生産量可視化アプリの改修</DialogTitle>
+                            <DialogContent>
+                                <DialogContentText style={{ color: 'black' }}>
+                                    <Typography pt={1} fontWeight="bold" variant="subtitle1">
+                                        ◆Period
+                                    </Typography>
+                                    <Typography variant="body1">
+                                        2023/4~2023/8
+                                    </Typography>
+                                    <Typography pt={2} fontWeight="bold" variant="subtitle1">
+                                        ◆Summary
+                                    </Typography>
+                                    <Typography variant="body1">
+                                        <Multiline lines={summary} />
+                                    </Typography>
+                                    <Typography pt={2} fontWeight="bold" variant="subtitle1">
+                                        ◆Frontend
+                                    </Typography>
+                                    <Typography variant="body1">
+                                        Vue.js、TypeScript、Amplify
+                                    </Typography>
+                                    <Typography pt={2} fontWeight="bold" variant="subtitle1">
+                                        ◆Backend
+                                    </Typography>
+                                    <Typography variant="body1">
+                                        Python、API Gateway、Lambda
+                                    </Typography>
+                                    <Typography pt={1} fontWeight="bold" variant="subtitle1">
+                                        ◆Database
+                                    </Typography>
+                                    <Typography variant="body1">
+                                        DynamoDB
+                                    </Typography>
+                                </DialogContentText>
+                            </DialogContent>
+                            <DialogActions>
+                                <button onClick={handleClose}>Close</button>
+                            </DialogActions>
+                        </Dialog>
+        </Grid>
+        </Grid>
+        </Box>
         </>
     )
 }

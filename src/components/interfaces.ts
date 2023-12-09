@@ -13,4 +13,5 @@ export interface ExperienceCardProps {
     title: string,
     period: string,
     summary: string,
+    //technical_element: string[]
 }

@@ -1,7 +1,5 @@
 import Box from '@mui/material/Box';
 import {  Grid, Typography } from "@mui/material";
-
-import { useState } from 'react';
 import amplify from "../../img/Amplify.jpg";
 import { Multiline } from '../Multiline';
 import { ExperienceCardProps } from '../interfaces';
@@ -19,15 +17,6 @@ const experienceItems: ExperienceCardProps[] = [
 
 
 export const Experience = () => {
-    const [open, setOpen] = useState(false);
-
-    const handleOpen = () => {
-        setOpen(true);
-    };
-
-    const handleClose = () => {
-        setOpen(false);
-    };
 
     return (
         <>

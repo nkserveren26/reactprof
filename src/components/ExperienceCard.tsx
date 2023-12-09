@@ -31,14 +31,14 @@ export const ExperienceCard = ({props}: {props: ExperienceCardProps}) => {
                 </CardContent>
             </Card>
             <Dialog open={open} onClose={handleClose}>
-                <DialogTitle fontWeight="bold">紡績工場の生産量可視化ダッシュボード画面の作成</DialogTitle>
+                <DialogTitle fontWeight="bold">{title}</DialogTitle>
                 <DialogContent>
                     <DialogContentText style={{ color: 'black' }}>
                         <Typography pt={1} fontWeight="bold" variant="subtitle1">
                             ◆Period
                         </Typography>
                         <Typography variant="body1">
-                            2023/4~2023/8
+                            {period}
                         </Typography>
                         <Typography pt={2} fontWeight="bold" variant="subtitle1">
                             ◆Summary

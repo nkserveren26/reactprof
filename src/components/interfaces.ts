@@ -8,10 +8,14 @@ export interface certificationCardProps {
     certificationList: string[],
 }
 
+export interface TechnicalElement {
+    [key: string]: string;
+}
+
 export interface ExperienceCardProps {
     image: string,
     title: string,
     period: string,
     summary: string,
-    //technical_element: string[]
+    technical_elements: TechnicalElement
 }

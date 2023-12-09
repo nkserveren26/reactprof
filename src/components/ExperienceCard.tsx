@@ -4,7 +4,7 @@ import { Multiline } from './Multiline';
 import { ExperienceCardProps } from "./interfaces";
 
 export const ExperienceCard = ({props}: {props: ExperienceCardProps}) => {
-    const {title, period, image, summary } = props;
+    const {title, period, image, summary, technical_elements } = props;
     const [open, setOpen] = useState(false);
 
     const handleOpen = () => {
@@ -46,30 +46,18 @@ export const ExperienceCard = ({props}: {props: ExperienceCardProps}) => {
                         <Typography variant="body1">
                             <Multiline lines={summary} />
                         </Typography>
-                        <Typography pt={2} fontWeight="bold" variant="subtitle1">
-                            ◆Frontend
-                        </Typography>
-                        <Typography variant="body1">
-                            Vue.js、TypeScript、Amplify
-                        </Typography>
-                        <Typography pt={2} fontWeight="bold" variant="subtitle1">
-                            ◆Backend
-                        </Typography>
-                        <Typography variant="body1">
-                            Python、API Gateway、Lambda
-                        </Typography>
-                        <Typography pt={2} fontWeight="bold" variant="subtitle1">
-                            ◆Database
-                        </Typography>
-                        <Typography variant="body1">
-                            DynamoDB
-                        </Typography>
-                        <Typography pt={2} fontWeight="bold" variant="subtitle1">
-                            ◆Version Control Tool
-                        </Typography>
-                        <Typography variant="body1">
-                            Git
-                        </Typography>
+                        {Object.keys(technical_elements).map((technical_element_key) => {
+                            return (
+                                <>
+                                <Typography pt={2} fontWeight="bold" variant="subtitle1">
+                                    {technical_element_key}
+                                </Typography>
+                                <Typography variant="body1">
+                                    {technical_elements[technical_element_key]}
+                                </Typography>
+                                </>
+                            )
+                        })}
                     </DialogContentText>
                 </DialogContent>
                 <DialogActions>

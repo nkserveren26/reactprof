@@ -10,7 +10,14 @@ const experienceItems: ExperienceCardProps[] = [
         image: amplify,
         title: "紡績工場の生産量可視化ダッシュボード画面の作成",
         period: "2023/4 - 2023/8",
-        summary: "紡績工場の生産量を可視化するダッシュボード画面を作成。"
+        summary: "紡績工場の生産量を可視化するダッシュボード画面を作成。",
+        technical_elements:
+            {
+                "◆Frontend": "Vue.js、TypeScript、Amplify",
+                "◆Backend": "Python、API Gateway、Lambda",
+                "◆Database": "DynamoDB",
+                "◆Version Control Tool": "Git"
+            }
     }
 ];
 

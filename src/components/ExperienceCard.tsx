@@ -1,11 +1,10 @@
 import { Card, CardContent, CardMedia, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Grid, Typography } from "@mui/material";
 import { useState } from "react";
-import amplify from "../../img/Amplify.jpg";
 import { Multiline } from './Multiline';
+import { ExperienceCardProps } from "./interfaces";
 
-const summary = "紡績工場の生産量を可視化するダッシュボード画面を作成。";
-
-export const ExperienceCard = () => {
+export const ExperienceCard = ({props}: {props: ExperienceCardProps}) => {
+    const {title, period, image, summary } = props;
     const [open, setOpen] = useState(false);
 
     const handleOpen = () => {
@@ -20,14 +19,14 @@ export const ExperienceCard = () => {
             <Card onClick={handleOpen} style={{ cursor: 'pointer' }} sx={{ maxWidth: 345 }}>
                 <CardMedia
                     sx={{ height: 160 }}
-                    image={amplify}
+                    image={image}
                 />
                 <CardContent>
                     <Typography paddingBottom={1} fontWeight="bold" variant="h6" >
-                        紡績工場の生産量可視化ダッシュボード画面の作成
+                        {title}
                     </Typography>
                     <Typography >
-                        2023/04 - 2023/08
+                        {period}
                     </Typography>
                 </CardContent>
             </Card>

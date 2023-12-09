@@ -43,7 +43,7 @@ export const Header:FC<HeaderProps> = (props) => {
     return (
       <ThemeProvider theme={theme}>
         <Box sx={{ flexGrow: 1 }}>
-          <AppBar position="static">
+          <AppBar position="sticky">
             <Toolbar disableGutters={true}>
               <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
                 {title}

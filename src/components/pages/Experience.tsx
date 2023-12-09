@@ -18,6 +18,18 @@ const experienceItems: ExperienceCardProps[] = [
                 "◆Database": "DynamoDB",
                 "◆Version Control Tool": "Git"
             }
+    },
+    {
+        image: amplify,
+        title: "自社Webサービスの機能追加",
+        period: "2023/5",
+        summary: "自社WebサービスにCSVダウンロード機能を追加。\nバックエンドの実装を担当。",
+        technical_elements:
+        {
+            "◆Backend": "JavaScript、API Gateway、Lambda",
+            "◆Database": "DynamoDB",
+            "◆Version Control Tool": "Git"
+        }
     }
 ];
 
@@ -36,10 +48,15 @@ export const Experience = () => {
             backgroundColor: 'white',
         }}>
             <Typography paddingBottom={3} fontWeight="bold" variant="h3">Experiences</Typography>
-            <Grid container alignItems="center" justifyContent="center">
-            <Grid item xs={10}>
-                <ExperienceCard props={experienceItems[0]} />
-        </Grid>
+            <Grid columns={{ xs: 6, sm: 8, md: 12 }} container alignItems="center" justifyContent="center">
+                {experienceItems.map((experienceItem, index) => {
+                    return (
+                        <Grid item xs={6} sm={4} md={4}>
+                            <ExperienceCard key={index} props={experienceItem} />
+                        </Grid>
+                    )
+                } 
+                )}
         </Grid>
         </Box>
         </>

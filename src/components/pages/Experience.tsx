@@ -57,7 +57,7 @@ export const Experience = () => {
                     )
                 } 
                 )}
-        </Grid>
+            </Grid>
         </Box>
         </>
     )

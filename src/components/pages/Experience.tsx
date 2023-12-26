@@ -45,6 +45,7 @@ export const Experience = () => {
                 const apiUrl: string = process.env.REACT_APP_GET_WORKS_URL;
                 const response = await axios.get(apiUrl);
                 setworksData(response.data);
+                console.log(response.data);
 
             } catch (error) {
                 console.error("Error getting works data:", error);
@@ -52,7 +53,7 @@ export const Experience = () => {
         }
 
         getWorksData();
-    });
+    }, []);
 
     return (
         <>

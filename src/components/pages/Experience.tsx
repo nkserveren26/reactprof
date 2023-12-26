@@ -42,7 +42,8 @@ export const Experience = () => {
     useEffect(() => {
         const getWorksData = async () => {
             try {
-                const response = await axios.get("");
+                const apiUrl: string = process.env.REACT_APP_GET_WORKS_URL;
+                const response = await axios.get(apiUrl);
                 setworksData(response.data);
 
             } catch (error) {

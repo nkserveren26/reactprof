@@ -1,9 +1,10 @@
 import Box from '@mui/material/Box';
 import {  Grid, Typography } from "@mui/material";
 import amplify from "../../img/Amplify.jpg";
-import { Multiline } from '../Multiline';
 import { ExperienceCardProps } from '../interfaces';
 import { ExperienceCard } from '../ExperienceCard';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 const experienceItems: ExperienceCardProps[] = [
     {
@@ -36,6 +37,19 @@ const experienceItems: ExperienceCardProps[] = [
 
 
 export const Experience = () => {
+    const [worksData, setworksData] = useState();
+
+    useEffect(() => {
+        const getWorksData = async () => {
+            try {
+                const response = await axios.get("");
+                setworksData(response.data);
+
+            } catch (error) {
+                console.error("Error getting works data:", error);
+            }
+        }
+    });
 
     return (
         <>

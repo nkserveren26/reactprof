@@ -50,6 +50,8 @@ export const Experience = () => {
                 console.error("Error getting works data:", error);
             }
         }
+
+        getWorksData();
     });
 
     return (

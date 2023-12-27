@@ -37,7 +37,7 @@ const experienceItems: ExperienceCardProps[] = [
 
 
 export const Experience = () => {
-    const [worksData, setworksData] = useState();
+    const [worksDataList, setworksData] = useState([]);
 
     useEffect(() => {
         const getWorksData = async () => {
@@ -67,10 +67,10 @@ export const Experience = () => {
         }}>
             <Typography paddingBottom={3} fontWeight="bold" variant="h3">Experiences</Typography>
             <Grid columns={{ xs: 6, sm: 8, md: 12 }} container alignItems="center" justifyContent="center">
-                {experienceItems.map((experienceItem, index) => {
+                    {worksDataList.map((worksData, index) => {
                     return (
                         <Grid item xs={6} sm={4} md={4}>
-                            <ExperienceCard key={index} props={experienceItem} />
+                            <ExperienceCard key={index} props={worksData} />
                         </Grid>
                     )
                 } 

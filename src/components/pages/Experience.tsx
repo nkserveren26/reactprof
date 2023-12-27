@@ -8,7 +8,7 @@ import axios from 'axios';
 
 const experienceItems: ExperienceCardProps[] = [
     {
-        image: amplify,
+        image: "/src/components/img/Amplify.jpg",
         title: "紡績工場の生産量可視化ダッシュボード画面の作成",
         period: "2023/4 - 2023/8",
         summary: "紡績工場の生産量を可視化するダッシュボード画面を作成。",
@@ -37,15 +37,16 @@ const experienceItems: ExperienceCardProps[] = [
 
 
 export const Experience = () => {
-    const [worksDataList, setworksData] = useState([]);
+    const [worksDataList, setworksData] = useState(experienceItems);
 
+    /*
     useEffect(() => {
         const getWorksData = async () => {
             try {
                 const apiUrl: string = process.env.REACT_APP_GET_WORKS_URL;
                 const response = await axios.get(apiUrl);
                 setworksData(response.data);
-                console.log(response.data);
+                console.log(worksDataList);
 
             } catch (error) {
                 console.error("Error getting works data:", error);
@@ -54,6 +55,7 @@ export const Experience = () => {
 
         getWorksData();
     }, []);
+    */
 
     return (
         <>
@@ -66,16 +68,13 @@ export const Experience = () => {
             backgroundColor: 'white',
         }}>
             <Typography paddingBottom={3} fontWeight="bold" variant="h3">Experiences</Typography>
-            <Grid columns={{ xs: 6, sm: 8, md: 12 }} container alignItems="center" justifyContent="center">
-                    {worksDataList.map((worksData, index) => {
-                    return (
-                        <Grid item xs={6} sm={4} md={4}>
-                            <ExperienceCard key={index} props={worksData} />
+                <Grid columns={{ xs: 6, sm: 8, md: 12 }} container alignItems="center" justifyContent="center">
+                    {Array.isArray(worksDataList) && worksDataList.map((worksData, index) => (
+                        <Grid item xs={6} sm={4} md={4} key={index}>
+                            <ExperienceCard props={worksData} />
                         </Grid>
-                    )
-                } 
-                )}
-            </Grid>
+                    ))}
+                </Grid>
         </Box>
         </>
     )

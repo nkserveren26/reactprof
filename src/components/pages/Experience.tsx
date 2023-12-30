@@ -37,15 +37,20 @@ const experienceItems: ExperienceCardProps[] = [
 
 
 export const Experience = () => {
-    const [worksDataList, setworksData] = useState(experienceItems);
+    const [worksDataList, setworksData] = useState([]);
+    console.log("start rendering");
 
-    /*
+    
     useEffect(() => {
         const getWorksData = async () => {
             try {
                 const apiUrl: string = process.env.REACT_APP_GET_WORKS_URL;
+                //const url: string = "https://jsonplaceholder.typicode.com/posts";
                 const response = await axios.get(apiUrl);
                 setworksData(response.data);
+                console.log(typeof(response.data));
+                console.log(response.data);
+                console.log("worksDataListのデータを表示");
                 console.log(worksDataList);
 
             } catch (error) {
@@ -55,7 +60,7 @@ export const Experience = () => {
 
         getWorksData();
     }, []);
-    */
+    
 
     return (
         <>
@@ -69,7 +74,7 @@ export const Experience = () => {
         }}>
             <Typography paddingBottom={3} fontWeight="bold" variant="h3">Experiences</Typography>
                 <Grid columns={{ xs: 6, sm: 8, md: 12 }} container alignItems="center" justifyContent="center">
-                    {Array.isArray(worksDataList) && worksDataList.map((worksData, index) => (
+                    {Array.isArray(experienceItems) && experienceItems.map((worksData, index) => (
                         <Grid item xs={6} sm={4} md={4} key={index}>
                             <ExperienceCard props={worksData} />
                         </Grid>

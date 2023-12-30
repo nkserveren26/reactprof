@@ -47,7 +47,8 @@ export const Experience = () => {
                 const apiUrl: string = process.env.REACT_APP_GET_WORKS_URL;
                 //const url: string = "https://jsonplaceholder.typicode.com/posts";
                 const response = await axios.get(apiUrl);
-                setworksData(response.data);
+                const data = [response.data];
+                setworksData(...data);
                 console.log(typeof(response.data));
                 console.log(response.data);
                 console.log("worksDataListのデータを表示");

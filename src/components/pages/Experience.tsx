@@ -8,7 +8,7 @@ import axios from 'axios';
 
 const experienceItems: ExperienceCardProps[] = [
     {
-        image: amplify,
+        image: "/src/components/img/Amplify.jpg",
         title: "紡績工場の生産量可視化ダッシュボード画面の作成",
         period: "2023/4 - 2023/8",
         summary: "紡績工場の生産量を可視化するダッシュボード画面を作成。",
@@ -37,19 +37,30 @@ const experienceItems: ExperienceCardProps[] = [
 
 
 export const Experience = () => {
-    const [worksData, setworksData] = useState();
+    const [worksDataList, setworksData] = useState([]);
+    console.log("start rendering");
 
+    
     useEffect(() => {
         const getWorksData = async () => {
             try {
-                const response = await axios.get("");
+                const apiUrl: string = process.env.REACT_APP_GET_WORKS_URL;
+                //const url: string = "https://jsonplaceholder.typicode.com/posts";
+                const response = await axios.get(apiUrl);
                 setworksData(response.data);
+                console.log(typeof(response.data));
+                console.log(response.data);
+                console.log("worksDataListのデータを表示");
+                console.log(worksDataList);
 
             } catch (error) {
                 console.error("Error getting works data:", error);
             }
         }
-    });
+
+        getWorksData();
+    }, []);
+    
 
     return (
         <>
@@ -62,16 +73,13 @@ export const Experience = () => {
             backgroundColor: 'white',
         }}>
             <Typography paddingBottom={3} fontWeight="bold" variant="h3">Experiences</Typography>
-            <Grid columns={{ xs: 6, sm: 8, md: 12 }} container alignItems="center" justifyContent="center">
-                {experienceItems.map((experienceItem, index) => {
-                    return (
-                        <Grid item xs={6} sm={4} md={4}>
-                            <ExperienceCard key={index} props={experienceItem} />
+                <Grid columns={{ xs: 6, sm: 8, md: 12 }} container alignItems="center" justifyContent="center">
+                    {Array.isArray(experienceItems) && experienceItems.map((worksData, index) => (
+                        <Grid item xs={6} sm={4} md={4} key={index}>
+                            <ExperienceCard props={worksData} />
                         </Grid>
-                    )
-                } 
-                )}
-            </Grid>
+                    ))}
+                </Grid>
         </Box>
         </>
     )

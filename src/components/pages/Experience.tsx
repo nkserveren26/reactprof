@@ -71,7 +71,7 @@ export const Experience = () => {
         }}>
             <Typography paddingBottom={3} fontWeight="bold" variant="h3">Experiences</Typography>
                 <Grid columns={{ xs: 6, sm: 8, md: 12 }} container alignItems="center" justifyContent="center">
-                    {Array.isArray(experienceItems) && experienceItems.map((worksData, index) => (
+                    {Array.isArray(worksDataList) && worksDataList.map((worksData, index) => (
                         <Grid item xs={6} sm={4} md={4} key={index}>
                             <ExperienceCard props={worksData} />
                         </Grid>

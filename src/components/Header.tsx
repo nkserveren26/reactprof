@@ -48,10 +48,10 @@ export const Header:FC<HeaderProps> = (props) => {
               <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
                 {title}
               </Typography>
-              {buttonParams.map((buttonParam) => {
+              {buttonParams.map((buttonParam, index) => {
                 const {buttonLabel, path} = buttonParam;
                 return (
-                  <Button color="inherit" component={Link} to={path}>
+                  <Button key={index} color="inherit" component={Link} to={path}>
                     {buttonLabel}
                   </Button>
                 )

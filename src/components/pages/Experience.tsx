@@ -57,6 +57,11 @@ export const Experience = () => {
 
         getWorksData();
     }, []);
+
+    // データがまだ取得されていない場合の処理
+    if (worksDataList.length === 0) {
+        return <p>Loading...</p>;
+    }
     
 
     return (
@@ -69,6 +74,7 @@ export const Experience = () => {
             m={0} pt={5} sx={{
             backgroundColor: 'white',
         }}>
+            <p>{worksDataList[0]["userId"]}</p>
             <Typography paddingBottom={3} fontWeight="bold" variant="h3">Experiences</Typography>
                 <Grid columns={{ xs: 6, sm: 8, md: 12 }} container alignItems="center" justifyContent="center">
                     {Array.isArray(experienceItems) && experienceItems.map((worksData, index) => (

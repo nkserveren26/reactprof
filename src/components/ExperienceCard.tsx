@@ -1,4 +1,4 @@
-import { Card, CardContent, CardMedia, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Grid, Typography } from "@mui/material";
+import { Box, Card, CardContent, CardMedia, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Grid, Typography } from "@mui/material";
 import { useState } from "react";
 import { Multiline } from './Multiline';
 import { ExperienceCardProps } from "./interfaces";
@@ -46,16 +46,16 @@ export const ExperienceCard = ({props}: {props: ExperienceCardProps}) => {
                         <Typography variant="body1">
                             <Multiline lines={summary} />
                         </Typography>
-                        {Object.keys(technical_elements).map((technical_element_key) => {
+                        {Object.keys(technical_elements).map((technical_element_key, index) => {
                             return (
-                                <>
-                                <Typography pt={2} fontWeight="bold" variant="subtitle1">
-                                    {technical_element_key}
-                                </Typography>
-                                <Typography variant="body1">
-                                    {technical_elements[technical_element_key]}
-                                </Typography>
-                                </>
+                                <Box key={index}>
+                                    <Typography pt={2} fontWeight="bold" variant="subtitle1">
+                                        {technical_element_key}
+                                    </Typography>
+                                    <Typography variant="body1">
+                                        {technical_elements[technical_element_key]}
+                                    </Typography>
+                                </Box>
                             )
                         })}
                     </DialogContentText>

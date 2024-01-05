@@ -1,6 +1,5 @@
 import Box from '@mui/material/Box';
 import {  Grid, Typography } from "@mui/material";
-import amplify from "../../img/Amplify.jpg";
 import { ExperienceCardProps } from '../interfaces';
 import { ExperienceCard } from '../ExperienceCard';
 import { useEffect, useState } from 'react';
@@ -38,8 +37,6 @@ const experienceItems: ExperienceCardProps[] = [
 
 export const Experience = () => {
     const [worksDataList, setworksData] = useState([]);
-    console.log("start rendering");
-
     
     useEffect(() => {
         const getWorksData = async () => {

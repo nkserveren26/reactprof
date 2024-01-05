@@ -1,6 +1,5 @@
 import Box from '@mui/material/Box';
 import {  Grid, Typography } from "@mui/material";
-import amplify from "../../img/Amplify.jpg";
 import { ExperienceCardProps } from '../interfaces';
 import { ExperienceCard } from '../ExperienceCard';
 import { useEffect, useState } from 'react';
@@ -8,7 +7,7 @@ import axios from 'axios';
 
 const experienceItems: ExperienceCardProps[] = [
     {
-        image: "/src/components/img/Amplify.jpg",
+        image: "Amplify.jpg",
         title: "紡績工場の生産量可視化ダッシュボード画面の作成",
         period: "2023/4 - 2023/8",
         summary: "紡績工場の生産量を可視化するダッシュボード画面を作成。",
@@ -21,7 +20,7 @@ const experienceItems: ExperienceCardProps[] = [
             }
     },
     {
-        image: amplify,
+        image: "Amplify.jpg",
         title: "自社Webサービスの機能追加",
         period: "2023/5",
         summary: "自社WebサービスにCSVダウンロード機能を追加。\nバックエンドの実装を担当。",
@@ -38,8 +37,6 @@ const experienceItems: ExperienceCardProps[] = [
 
 export const Experience = () => {
     const [worksDataList, setworksData] = useState([]);
-    console.log("start rendering");
-
     
     useEffect(() => {
         const getWorksData = async () => {

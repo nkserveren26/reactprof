@@ -19,7 +19,7 @@ export const ExperienceCard = ({props}: {props: ExperienceCardProps}) => {
             <Card onClick={handleOpen} style={{ cursor: 'pointer' }} sx={{ maxWidth: 345 }}>
                 <CardMedia
                     sx={{ height: 160 }}
-                    image={image}
+                    image={`${process.env.PUBLIC_URL}/${image}`}
                 />
                 <CardContent>
                     <Typography paddingBottom={1} fontWeight="bold" variant="h6" >

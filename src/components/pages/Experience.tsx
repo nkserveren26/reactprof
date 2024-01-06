@@ -127,9 +127,9 @@ export const Experience = () => {
         }}>
             <p>{worksDataList[0]["userId"]}</p>
             <Typography paddingBottom={3} fontWeight="bold" variant="h3">Experiences</Typography>
-                <Grid columns={{ xs: 6, sm: 8, md: 12 }} container alignItems="center" justifyContent="center">
+                <Grid columns={{ xs: 6, sm: 8, md: 12 }} container columnSpacing={3} alignItems="center" justifyContent="center">
                     {Array.isArray(experienceItems) && experienceItems.map((worksData, index) => (
-                        <Grid item xs={6} sm={4} md={4} key={index} pb={3}>
+                        <Grid item xs={6} sm={4} md="auto" key={index} pb={3}>
                             <ExperienceCard props={worksData} />
                         </Grid>
                     ))}

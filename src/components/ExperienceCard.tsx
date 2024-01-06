@@ -16,7 +16,7 @@ export const ExperienceCard = ({props}: {props: ExperienceCardProps}) => {
     };
     return (
         <>
-            <Card onClick={handleOpen} style={{ cursor: 'pointer' }} sx={{ maxWidth: 345 }}>
+            <Card onClick={handleOpen} style={{ cursor: 'pointer' }} sx={{ width: 345, height: 300 }}>
                 <CardMedia
                     sx={{ height: 160 }}
                     image={`${process.env.PUBLIC_URL}/${image}`}

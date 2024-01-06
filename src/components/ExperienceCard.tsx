@@ -22,9 +22,11 @@ export const ExperienceCard = ({props}: {props: ExperienceCardProps}) => {
                     image={`${process.env.PUBLIC_URL}/${image}`}
                 />
                 <CardContent>
-                    <Typography paddingBottom={1} fontWeight="bold" variant="h6" >
+                    <Box height={70}>
+                    <Typography fontWeight="bold" variant="h6" >
                         {title}
                     </Typography>
+                    </Box>
                     <Typography >
                         {period}
                     </Typography>

@@ -16,7 +16,8 @@ const experienceItems: ExperienceCardProps[] = [
                 "◆Frontend": "Vue.js、TypeScript、Amplify",
                 "◆Backend": "Python、API Gateway、Lambda",
                 "◆Database": "DynamoDB",
-                "◆Version Control Tool": "Git"
+                "◆Version Control Tool": "Git",
+                "◆Project Management Tool": "Backlog",
             }
     },
     {
@@ -28,9 +29,62 @@ const experienceItems: ExperienceCardProps[] = [
         {
             "◆Backend": "JavaScript、API Gateway、Lambda",
             "◆Database": "DynamoDB",
-            "◆Version Control Tool": "Git"
+            "◆Version Control Tool": "Git",
+            "◆Project Management Tool": "Backlog",
         }
-    }
+    },
+    {
+        image: "Amplify.jpg",
+        title: "SORACOMからS3へのファイル転送基盤の構築",
+        period: "2023/5 - 2023/6",
+        summary: "SORACOM側のS3転送設定およびAWS側の基盤構築を担当。\n基盤リソースはCDKで構築。",
+        technical_elements:
+        {
+            "◆Language": "TypeScript",
+            "◆IaC": "CDK",
+            "◆AWS Resource": "S3、IAM Role・IAM Policy、DynamoDB、Lambda、Lambda Layer、EventBridge",
+            "◆Project Management Tool": "Backlog",
+        }
+    },
+    {
+        image: "Amplify.jpg",
+        title: "Webアプリケーション認証APIの改修",
+        period: "2023/10 - 現在",
+        summary: "Webアプリケーション認証APIの改修を実施。\n改修では設計、実装、単体テストを担当。",
+        technical_elements:
+        {
+            "◆Language": "JavaScript",
+            "◆Backend": "API Gateway、Lambda、Cognito",
+            "◆Database": "DynamoDB",
+            "◆Version Control Tool": "Git",
+            "◆Test Tool": "Postman",
+            "◆Project Management Tool": "Backlog",
+        }
+    },
+    {
+        image: "Amplify.jpg",
+        title: "フロントエンドCICD基盤構築業務",
+        period: "2023/9",
+        summary: "Reactで構築したフロントエンドのCICD（Continuous Integration and Continuous Deployment）基盤を構築。\nCodeBuildでのビルドプロセス設計、実装。",
+        technical_elements:
+        {
+            "◆CICD Tool": "CodeBuild",
+            "◆Project Management Tool": "Backlog",
+        }
+    },
+    {
+        image: "Amplify.jpg",
+        title: "Amazon Aurora間のデータリアルタイム同期基盤構築",
+        period: "2023/8 - 2023/9",
+        summary: "異なるAWSアカウントで稼働するAWS Aurora間のリアルタイムデータ同期基盤を構築し、異なるAWSアカウント間でのデータの連携を確立。",
+        technical_elements:
+        {
+            "◆AWS Resource": "Database Migration Service、Amazon Aurora、VPC、VPC Peering",
+            "◆RDBMS": "MySQL",
+            "◆Version Control Tool": "Git",
+            "◆Project Management Tool": "Backlog",
+        }
+    },
 ];
 
 
@@ -68,14 +122,14 @@ export const Experience = () => {
             flexDirection="column"
             alignItems="center"
             justifyContent="center"
-            m={0} pt={5} sx={{
+            m={0} pt={5} pl={2} pr={2} sx={{
             backgroundColor: 'white',
         }}>
             <p>{worksDataList[0]["userId"]}</p>
             <Typography paddingBottom={3} fontWeight="bold" variant="h3">Experiences</Typography>
-                <Grid columns={{ xs: 6, sm: 8, md: 12 }} container alignItems="center" justifyContent="center">
+                <Grid columns={{ xs: 6, sm: 8, md: 12 }} container columnSpacing={6} alignItems="center" justifyContent="center">
                     {Array.isArray(experienceItems) && experienceItems.map((worksData, index) => (
-                        <Grid item xs={6} sm={4} md={4} key={index}>
+                        <Grid item xs={6} sm={4} md="auto" key={index} pb={6}>
                             <ExperienceCard props={worksData} />
                         </Grid>
                     ))}

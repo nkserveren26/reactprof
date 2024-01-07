@@ -40,7 +40,37 @@ const profItems: ProfObject[] = [
         icon: <CakeIcon />,
         title: "好きな食べ物",
         subheader: "チョコレート"
-    }
+    },
+    {
+        icon: <CakeIcon />,
+        title: "趣味",
+        subheader: "音楽鑑賞、スポーツ観戦"
+    },
+    {
+        icon: <CakeIcon />,
+        title: "応援しているサッカーチーム",
+        subheader: "リバプールFC"
+    },
+    {
+        icon: <CakeIcon />,
+        title: "応援している野球チーム",
+        subheader: "埼玉西武ライオンズ"
+    },
+    {
+        icon: <CakeIcon />,
+        title: "好きなアーティスト",
+        subheader: "B'z、Mr.Children、サザンオールスターズ、Oasis"
+    },
+    {
+        icon: <CakeIcon />,
+        title: "好きな外国",
+        subheader: "ドイツ"
+    },
+    {
+        icon: <CakeIcon />,
+        title: "好きな言葉",
+        subheader: "人間万事塞翁が馬"
+    },
 ];
 
 export const Profile = () => {
@@ -49,10 +79,10 @@ export const Profile = () => {
           <SDiv>
               <h1>プロフィール</h1>
               <GridDiv>
-                  <Grid container spacing={3} columns={{ xs: 6, sm: 8, md: 12 }} alignItems='center' justifyContent='center'>
+                    <Grid container columns={{ xs: 6, sm: 8, md: 12 }} columnSpacing={6} alignItems='center' justifyContent='center'>
                       {profItems.map((profItem: ProfObject) => {
                           return (
-                              <Grid item xs={6} sm={4} md={4}>
+                              <Grid item xs={6} sm={4} md="auto" pb={4}>
                                   <ProfItem
                                       icon={profItem.icon}
                                       title={profItem.title}

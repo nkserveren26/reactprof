@@ -10,7 +10,7 @@ type Props = {
 export const ProfItem: React.FC<Props> = (props) => {
     const { icon,title,subheader } = props;
     return (
-        <Card>
+        <Card sx={{ width: 300, height: 90}}>
             <CardHeader
               avatar={<Avatar>{icon}</Avatar>}
               title={title}

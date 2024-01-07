@@ -1,6 +1,16 @@
 import styled from "styled-components";
 import CakeIcon from '@mui/icons-material/Cake';
 import BloodtypeIcon from '@mui/icons-material/Bloodtype';
+import StarIcon from '@mui/icons-material/Star';
+import LocationCityIcon from '@mui/icons-material/LocationCity';
+import WorkIcon from '@mui/icons-material/Work';
+import FastfoodIcon from '@mui/icons-material/Fastfood';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import SportsSoccerIcon from '@mui/icons-material/SportsSoccer';
+import SportsBaseballIcon from '@mui/icons-material/SportsBaseball';
+import MusicNoteIcon from '@mui/icons-material/MusicNote';
+import LanguageIcon from '@mui/icons-material/Language';
+import SmsIcon from '@mui/icons-material/Sms';
 import { ProfItem } from "./ProfItem";
 import { Grid } from "@mui/material";
 
@@ -17,7 +27,7 @@ const profItems: ProfObject[] = [
         subheader: "1993/2/26"
     },
     {
-        icon: <CakeIcon />,
+        icon: <StarIcon />,
         title: "星座",
         subheader: "うお座"
     },
@@ -27,47 +37,47 @@ const profItems: ProfObject[] = [
         subheader: "B型"
     },
     {
-        icon: <CakeIcon />,
+        icon: <LocationCityIcon />,
         title: "出身",
         subheader: "大阪府枚方市"
     },
     {
-        icon: <CakeIcon />,
+        icon: <WorkIcon />,
         title: "職業",
         subheader: "ITエンジニア"
     },
     {
-        icon: <CakeIcon />,
+        icon: <FastfoodIcon />,
         title: "好きな食べ物",
         subheader: "チョコレート"
     },
     {
-        icon: <CakeIcon />,
+        icon: <FavoriteIcon />,
         title: "趣味",
         subheader: "音楽鑑賞、スポーツ観戦"
     },
     {
-        icon: <CakeIcon />,
+        icon: <SportsSoccerIcon />,
         title: "応援しているサッカーチーム",
         subheader: "リバプールFC"
     },
     {
-        icon: <CakeIcon />,
+        icon: <SportsBaseballIcon />,
         title: "応援している野球チーム",
         subheader: "埼玉西武ライオンズ"
     },
     {
-        icon: <CakeIcon />,
+        icon: <MusicNoteIcon />,
         title: "好きなアーティスト",
         subheader: "B'z、Mr.Children、サザンオールスターズ、Oasis"
     },
     {
-        icon: <CakeIcon />,
+        icon: <LanguageIcon />,
         title: "好きな外国",
         subheader: "ドイツ"
     },
     {
-        icon: <CakeIcon />,
+        icon: <SmsIcon />,
         title: "好きな言葉",
         subheader: "人間万事塞翁が馬"
     },
@@ -101,7 +111,7 @@ export const Profile = () => {
 const SDiv = styled.div`
 background-color: lightgray;
 margin: 0;
-height: 500px;
+height: 600px;
 h1 {
     text-align: center;
     margin: 0;

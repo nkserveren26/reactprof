@@ -21,12 +21,12 @@ const theme = createTheme({
 
 const buttonParams: ButtonParam[] = [
   {
-    buttonLabel: "ABOUT",
-    path:"/about",
-  },
-  {
     buttonLabel: "TOP",
     path: "/",
+  },
+  {
+    buttonLabel: "ABOUT",
+    path:"/about",
   },
   {
     buttonLabel: "Experience",

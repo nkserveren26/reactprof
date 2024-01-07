@@ -12,8 +12,8 @@ export const Top = () => {
             <div className='mysummary'>
               <h1>IT Engineer</h1>
               <h2>N.K</h2>
-              <p>インフラ周りの仕事をメインでやってます。<br />
-                （VM、Linux、AWSなど）<br />
+              <p>AWSエンジニアやってます。<br />
+                バックエンドAPIの開発やAWSリソースの構築・運用をしています。<br />
                 プライベートは資格の勉強したり、コード書いたりしてます。<br />
               </p>
             </div>

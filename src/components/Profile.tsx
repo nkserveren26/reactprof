@@ -12,7 +12,7 @@ import MusicNoteIcon from '@mui/icons-material/MusicNote';
 import LanguageIcon from '@mui/icons-material/Language';
 import SmsIcon from '@mui/icons-material/Sms';
 import { ProfItem } from "./ProfItem";
-import { Grid } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 
 type ProfObject = {
     icon: JSX.Element,
@@ -84,9 +84,18 @@ const profItems: ProfObject[] = [
 ];
 
 export const Profile = () => {
+    const boxStyle = {
+        backgroundColor: '#fffaf0', // 背景色を指定
+        padding: '10px', // 必要に応じて余白を指定
+    };
     return (
         <>
-          <SDiv>
+          <Box style={boxStyle}
+               display="flex"
+               flexDirection="column"
+               alignItems="center"
+               justifyContent="center"
+          >
               <h1>プロフィール</h1>
               <GridDiv>
                     <Grid container columns={{ xs: 6, sm: 8, md: 12 }} columnSpacing={6} alignItems='center' justifyContent='center'>
@@ -103,13 +112,13 @@ export const Profile = () => {
                       })}
                   </Grid>
               </GridDiv>
-          </SDiv>
+          </Box>
         </>
     )
 }
 
 const SDiv = styled.div`
-background-color: lightgray;
+background-color: #fffafa;
 margin: 0;
 height: 600px;
 h1 {

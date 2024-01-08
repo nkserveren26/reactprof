@@ -117,7 +117,7 @@ export const About = () => {
 };
 
 const SDiv = styled.div`
-background-color: lightblue;
+background-color: #ffe4c4;
 margin: 0;
 height: 600px;
 h1 {

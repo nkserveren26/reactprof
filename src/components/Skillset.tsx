@@ -93,7 +93,7 @@ export const Skillset = () => {
 }
 
 const SDiv = styled.div`
-background-color: gray;
+background-color: #87cefa;
 margin: 0;
 height: 600px;
 h1 {

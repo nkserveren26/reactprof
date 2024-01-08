@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { CardContent, Grid, Typography, Avatar } from "@mui/material";
+import { CardContent, Grid, Typography, Avatar, Box } from "@mui/material";
 import { Card } from "@mui/material";
 import windowsserver from "../img/windowsserver.jpg";
 import centos from "../img/centos.jpg";
@@ -15,10 +15,20 @@ import react from "../img/react.jpg";
 import vue from "../img/vue.jpg";
 
 export const Skillset = () => {
+    const boxStyle = {
+        backgroundColor: "#87cefa", // 背景色を指定
+        height: "600px"
+    };
+
     return (
         <>
-            <SDiv>
-                <h1>スキルセット</h1>
+          <Box style={boxStyle}
+              display="flex"
+              flexDirection="column"
+              alignItems="center"
+              justifyContent="center"
+          >
+                <Typography paddingBottom={3} variant="h4" fontWeight="bold">スキルセット</Typography>
                 <GridDiv>
                     <Grid container spacing={4} columns={{ xs: 6, md: 8 }} alignItems='center' justifyContent='center'>
                         <Grid item xs={6} md={4}>
@@ -87,22 +97,11 @@ export const Skillset = () => {
                         </Grid>
                     </Grid>
                 </GridDiv>
-            </SDiv>
+            </Box>
         </>
     )
 }
 
-const SDiv = styled.div`
-background-color: #87cefa;
-margin: 0;
-height: 600px;
-h1 {
-    text-align: center;
-    margin: 0;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-`;
 
 const GridDiv = styled.div`
 padding-left: 5%;

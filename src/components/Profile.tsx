@@ -88,6 +88,7 @@ export const Profile = () => {
         backgroundColor: '#fffaf0', // 背景色を指定
         padding: '10px', // 必要に応じて余白を指定
     };
+    
     return (
         <>
           <Box style={boxStyle}

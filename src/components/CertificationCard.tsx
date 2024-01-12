@@ -3,7 +3,10 @@ import { CardContent, Typography, } from "@mui/material";
 import { CertificationList } from "./CertificationList";
 import { certificationCardProps } from "./interfaces";
 
+// 特定カテゴリの資格一覧を表示するCardコンポーネント
 export const CertificationCard = ({props}: {props: certificationCardProps}) => {
+    
+    // categoryNameとcertificationListをpropsとして受け取る
     const {categoryName, certificationList} = props;
     return (
         <>

@@ -70,54 +70,11 @@ export const About = () => {
             <h1>資格</h1>
                 <GridDiv>
                     <Grid container spacing={4} columns={{ xs: 6, md: 8 }} alignItems='center' justifyContent='center'>
-                        <Grid item xs={6} md={4}>
-                            <Card>
-                                <CardContent>
-                                    <Typography align="center" variant="h4">
-                                        AWS
-                                    </Typography>
-                                </CardContent>
-                                <CardContent>
-                                    <CertificationList list={awsCertifications} />
-                                </CardContent>
-                            </Card>
-                        </Grid>
-                        <Grid item xs={6} md={4}>
-                            <Card>
-                                <CardContent>
-                                    <Typography align="center" variant="h4">
-                                        Programming
-                                    </Typography>
-                                </CardContent>
-                                <CardContent>
-                                    <CertificationList list={programmingCertifications} />
-                                </CardContent>
-                            </Card>
-                        </Grid>
+                        {certCardProps.map((certCardProp) => (
                             <Grid item xs={6} md={4}>
-                                <Card>
-                                    <CardContent>
-                                        <Typography align="center" variant="h4">
-                                            Database
-                                        </Typography>
-                                    </CardContent>
-                                    <CardContent>
-                                        <CertificationList list={databaseCertifications} />
-                                    </CardContent>
-                                </Card>
+                                <CertificationCard props={certCardProp} />
                             </Grid>
-                            <Grid item xs={6} md={4}>
-                                <Card>
-                                    <CardContent>
-                                        <Typography align="center" variant="h4">
-                                            Other
-                                        </Typography>
-                                    </CardContent>
-                                    <CardContent>
-                                        <CertificationList list={otherCertifications} />
-                                    </CardContent>
-                                </Card>
-                            </Grid>
+                        ))}
                     </Grid>
                 </GridDiv>
         </SDiv>

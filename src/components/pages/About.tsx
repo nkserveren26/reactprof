@@ -25,7 +25,8 @@ const theme = createTheme({
 
 const awsCertifications: string[] = [
     "AWS Certified Solutions Architect - Associate",
-    "AWS Certified Developer - Associate"
+    "AWS Certified Developer - Associate",
+    "AWS Certified Solutions Architect - Professional"
 ];
 const programmingCertifications: string[] = [
     "Oracle Certified Java Programmer, Silver SE 8",
@@ -69,45 +70,11 @@ export const About = () => {
             <h1>資格</h1>
                 <GridDiv>
                     <Grid container spacing={4} columns={{ xs: 6, md: 8 }} alignItems='center' justifyContent='center'>
-                        <Grid item xs={6} md={4}>
-                            <Card>
-                                <CardContent>
-                                    <Typography align="center" variant="h4">
-                                        AWS
-                                    </Typography>
-                                </CardContent>
-                                <CardContent>
-                                    <CertificationList list={awsCertifications} />
-                                </CardContent>
-                            </Card>
-                        </Grid>
+                        {certCardProps.map((certCardProp) => (
                             <Grid item xs={6} md={4}>
-                                <CertificationCard props={certCardProps[0]} />
+                                <CertificationCard props={certCardProp} />
                             </Grid>
-                            <Grid item xs={6} md={4}>
-                                <Card>
-                                    <CardContent>
-                                        <Typography align="center" variant="h4">
-                                            Database
-                                        </Typography>
-                                    </CardContent>
-                                    <CardContent>
-                                        <CertificationList list={databaseCertifications} />
-                                    </CardContent>
-                                </Card>
-                            </Grid>
-                            <Grid item xs={6} md={4}>
-                                <Card>
-                                    <CardContent>
-                                        <Typography align="center" variant="h4">
-                                            Other
-                                        </Typography>
-                                    </CardContent>
-                                    <CardContent>
-                                        <CertificationList list={otherCertifications} />
-                                    </CardContent>
-                                </Card>
-                            </Grid>
+                        ))}
                     </Grid>
                 </GridDiv>
         </SDiv>
@@ -117,7 +84,7 @@ export const About = () => {
 };
 
 const SDiv = styled.div`
-background-color: lightblue;
+background-color: #ffe4c4;
 margin: 0;
 height: 600px;
 h1 {

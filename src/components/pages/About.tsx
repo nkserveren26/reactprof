@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { CardContent, Grid, Typography, } from "@mui/material";
+import { Box, CardContent, Grid, Typography, } from "@mui/material";
 import { Card } from "@mui/material";
 import { Profile } from "../Profile";
 import { Skillset } from "../Skillset";
@@ -61,23 +61,30 @@ const certCardProps: certificationCardProps[] = [
 ];
 
 export const About = () => {
+    const boxStyle = {
+        backgroundColor: "#ffe4c4", // 背景色を指定
+        height: "500px"
+    };
     return (
         <>
         <ThemeProvider theme={theme}>
         <Profile />
         <Skillset />
-        <SDiv>
-            <h1>資格</h1>
-                <GridDiv>
-                    <Grid container spacing={4} columns={{ xs: 6, md: 8 }} alignItems='center' justifyContent='center'>
+        <Box style={boxStyle}
+              display="flex"
+              flexDirection="column"
+              alignItems="center"
+              justifyContent="center"
+        >
+            <Typography paddingBottom={3} variant="h4" fontWeight="bold">資格</Typography>
+                    <Grid container spacing={3} columns={{ xs: 6, md: 8 }} alignItems='center' justifyContent='center'>
                         {certCardProps.map((certCardProp) => (
-                            <Grid item xs={6} md={4}>
+                            <Grid item xs={6} md="auto">
                                 <CertificationCard props={certCardProp} />
                             </Grid>
                         ))}
                     </Grid>
-                </GridDiv>
-        </SDiv>
+        </Box>
         </ThemeProvider>
         </>
     );

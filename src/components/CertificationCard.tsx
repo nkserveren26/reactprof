@@ -10,7 +10,7 @@ export const CertificationCard = ({props}: {props: certificationCardProps}) => {
     const {categoryName, certificationList} = props;
     return (
         <>
-            <Card>
+            <Card sx={{ width: 500, height: 200 }}>
                 <CardContent>
                     <Typography align="center" variant="h4">
                         {categoryName}

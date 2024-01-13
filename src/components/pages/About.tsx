@@ -1,12 +1,10 @@
-import styled from "styled-components";
-import { CardContent, Grid, Typography, } from "@mui/material";
-import { Card } from "@mui/material";
+import { Grid, } from "@mui/material";
 import { Profile } from "../Profile";
 import { Skillset } from "../Skillset";
-import { CertificationList } from "../CertificationList";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { CertificationCard } from "../CertificationCard";
 import { certificationCardProps } from "../interfaces";
+import { ProfileBlock } from "../ProfileBlock";
 
 const theme = createTheme({
     components: {
@@ -63,37 +61,19 @@ const certCardProps: certificationCardProps[] = [
 export const About = () => {
     return (
         <>
-        <ThemeProvider theme={theme}>
-        <Profile />
-        <Skillset />
-        <SDiv>
-            <h1>資格</h1>
-                <GridDiv>
-                    <Grid container spacing={4} columns={{ xs: 6, md: 8 }} alignItems='center' justifyContent='center'>
+            <ThemeProvider theme={theme}>
+                <Profile />
+                <Skillset />
+                <ProfileBlock blockTitle="資格" backGroundColor="#ffe4c4">
+                    <Grid container spacing={3} columns={{ xs: 6, md: 8 }} alignItems='center' justifyContent='center'>
                         {certCardProps.map((certCardProp) => (
-                            <Grid item xs={6} md={4}>
+                            <Grid item xs={6} md="auto">
                                 <CertificationCard props={certCardProp} />
                             </Grid>
                         ))}
                     </Grid>
-                </GridDiv>
-        </SDiv>
-        </ThemeProvider>
+                </ProfileBlock>
+            </ThemeProvider>
         </>
     );
 };
-
-const SDiv = styled.div`
-background-color: #ffe4c4;
-margin: 0;
-height: 600px;
-h1 {
-    text-align: center;
-    margin: 0;
-}
-`;
-
-const GridDiv = styled.div`
-padding-left: 5%;
-padding-right: 5%;
-`;

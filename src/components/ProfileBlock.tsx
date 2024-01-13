@@ -3,12 +3,13 @@ import { CertificationCard } from "./CertificationCard";
 
 type ProfileBlockProps = {
     blockTitle: string,
+    backGroundColor: string
     children: React.ReactNode;
 };
 
-export const ProfileBlock = ({blockTitle, children}: ProfileBlockProps) => {
+export const ProfileBlock = ({blockTitle, backGroundColor, children}: ProfileBlockProps) => {
     const boxStyle = {
-        backgroundColor: "#ffe4c4", // 背景色を指定
+        backgroundColor: backGroundColor, // 背景色を指定
         height: "500px"
     };
     return (

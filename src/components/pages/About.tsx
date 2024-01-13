@@ -1,9 +1,6 @@
-import styled from "styled-components";
-import { Box, CardContent, Grid, Typography, } from "@mui/material";
-import { Card } from "@mui/material";
+import { Grid, } from "@mui/material";
 import { Profile } from "../Profile";
 import { Skillset } from "../Skillset";
-import { CertificationList } from "../CertificationList";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { CertificationCard } from "../CertificationCard";
 import { certificationCardProps } from "../interfaces";
@@ -62,10 +59,6 @@ const certCardProps: certificationCardProps[] = [
 ];
 
 export const About = () => {
-    const boxStyle = {
-        backgroundColor: "#ffe4c4", // 背景色を指定
-        height: "500px"
-    };
     return (
         <>
             <ThemeProvider theme={theme}>

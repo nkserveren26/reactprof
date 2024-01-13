@@ -1,5 +1,4 @@
-import { Box, Grid, Typography } from "@mui/material";
-import { CertificationCard } from "./CertificationCard";
+import { Box, Typography } from "@mui/material";
 
 type ProfileBlockProps = {
     blockTitle: string,

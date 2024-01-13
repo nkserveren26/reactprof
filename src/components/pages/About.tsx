@@ -7,6 +7,7 @@ import { CertificationList } from "../CertificationList";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { CertificationCard } from "../CertificationCard";
 import { certificationCardProps } from "../interfaces";
+import { ProfileBlock } from "../ProfileBlock";
 
 const theme = createTheme({
     components: {
@@ -67,16 +68,10 @@ export const About = () => {
     };
     return (
         <>
-        <ThemeProvider theme={theme}>
-        <Profile />
-        <Skillset />
-        <Box style={boxStyle}
-              display="flex"
-              flexDirection="column"
-              alignItems="center"
-              justifyContent="center"
-        >
-            <Typography paddingBottom={3} variant="h4" fontWeight="bold">資格</Typography>
+            <ThemeProvider theme={theme}>
+                <Profile />
+                <Skillset />
+                <ProfileBlock blockTitle="資格">
                     <Grid container spacing={3} columns={{ xs: 6, md: 8 }} alignItems='center' justifyContent='center'>
                         {certCardProps.map((certCardProp) => (
                             <Grid item xs={6} md="auto">
@@ -84,23 +79,8 @@ export const About = () => {
                             </Grid>
                         ))}
                     </Grid>
-        </Box>
-        </ThemeProvider>
+                </ProfileBlock>
+            </ThemeProvider>
         </>
     );
 };
-
-const SDiv = styled.div`
-background-color: #ffe4c4;
-margin: 0;
-height: 600px;
-h1 {
-    text-align: center;
-    margin: 0;
-}
-`;
-
-const GridDiv = styled.div`
-padding-left: 5%;
-padding-right: 5%;
-`;

@@ -2,14 +2,15 @@ import { Box, Typography } from "@mui/material";
 
 type ProfileBlockProps = {
     blockTitle: string,
-    backGroundColor: string
+    height: string,
+    backGroundColor: string,
     children: React.ReactNode;
 };
 
-export const ProfileBlock = ({blockTitle, backGroundColor, children}: ProfileBlockProps) => {
+export const ProfileBlock = ({blockTitle, backGroundColor, height, children}: ProfileBlockProps) => {
     const boxStyle = {
         backgroundColor: backGroundColor, // 背景色を指定
-        height: "500px"
+        height: height
     };
     return (
         <Box style={boxStyle}

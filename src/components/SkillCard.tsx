@@ -5,20 +5,9 @@ import python from "../img/python.jpg";
 import javascript from "../img/javascript.jpg";
 import typescript from "../img/typescript.jpg";
 import styled from "styled-components";
+import { SkillCardProps } from "./interfaces";
 
 
-
-type AvatorObject = {
-    alt:string,
-    src:string,
-    width:number,
-    height:number
-}
-
-type SkillCardProps = {
-    title:string,
-    images:Array<AvatorObject>
-}
 
 export const SkillCard: React.FC<SkillCardProps> = (props) => {
     const {title, images} = props;
@@ -26,7 +15,7 @@ export const SkillCard: React.FC<SkillCardProps> = (props) => {
         <>
             <Card>
                 <CardContent>
-                    <Typography align="center" variant="h4">
+                    <Typography align="center" variant="h4" paddingTop={2} paddingBottom={3}>
                         {title}
                     </Typography>
                 </CardContent>
@@ -35,10 +24,6 @@ export const SkillCard: React.FC<SkillCardProps> = (props) => {
                         {images.map((image) => (
                             <Avatar alt={image.alt} src={image.src} sx={{ width: image.width, height: image.height }} variant="square" />
                         ))}
-                        <Avatar alt="java" src={java} sx={{ width: 100, height: 120 }} variant="square" />
-                        <Avatar alt="python" src={python} sx={{ width: 100, height: 100 }} variant="square" />
-                        <Avatar alt="javascript" src={javascript} sx={{ width: 100, height: 80 }} variant="square" />
-                        <Avatar alt="typescript" src={typescript} sx={{ width: 100, height: 70 }} variant="square" />
                     </SDivFlex>
                 </CardContent>
             </Card>

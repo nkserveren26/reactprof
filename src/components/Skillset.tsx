@@ -13,6 +13,40 @@ import javascript from "../img/javascript.jpg";
 import typescript from "../img/typescript.jpg";
 import react from "../img/react.jpg";
 import vue from "../img/vue.jpg";
+import { SkillCardProps } from "./interfaces";
+import { SkillCard } from "./SkillCard";
+
+const skillCardProps: SkillCardProps[] = [
+    {
+        title: "Programming",
+        images: [
+            {
+                alt: "java",
+                src: java,
+                width: 100,
+                height: 120
+            },
+            {
+                alt: "python",
+                src: python,
+                width: 100,
+                height: 100
+            },
+            {
+                alt: "javascript",
+                src: javascript,
+                width: 100,
+                height: 80
+            },
+            {
+                alt: "typescript",
+                src: typescript,
+                width: 100,
+                height: 70
+            }
+        ]
+    },
+];
 
 export const Skillset = () => {
     const boxStyle = {
@@ -29,7 +63,6 @@ export const Skillset = () => {
               justifyContent="center"
           >
                 <Typography paddingBottom={3} variant="h4" fontWeight="bold">スキルセット</Typography>
-                <GridDiv>
                     <Grid container spacing={4} columns={{ xs: 6, md: 8 }} alignItems='center' justifyContent='center'>
                         <Grid item xs={6} md={4}>
                             <Card>
@@ -64,21 +97,9 @@ export const Skillset = () => {
                             </Card>
                         </Grid>
                         <Grid item xs={6} md={4}>
-                            <Card>
-                                <CardContent>
-                                    <Typography align="center" variant="h4">
-                                        Programming
-                                    </Typography>
-                                </CardContent>
-                                <CardContent>
-                                    <SDivFlex>
-                                        <Avatar alt="java" src={java} sx={{ width: 100, height: 120 }} variant="square" />
-                                        <Avatar alt="python" src={python} sx={{ width: 100, height: 100 }} variant="square" />
-                                        <Avatar alt="javascript" src={javascript} sx={{ width: 100, height: 80 }} variant="square" />
-                                        <Avatar alt="typescript" src={typescript} sx={{ width: 100, height: 70 }} variant="square" />
-                                    </SDivFlex>
-                                </CardContent>
-                            </Card>
+                            {skillCardProps.map((skillCardProp) => (
+                                <SkillCard title={skillCardProp.title} images={skillCardProp.images} />
+                            ))}
                         </Grid>
                         <Grid item xs={6} md={4}>
                             <Card>
@@ -96,7 +117,6 @@ export const Skillset = () => {
                             </Card>
                         </Grid>
                     </Grid>
-                </GridDiv>
             </Box>
         </>
     )

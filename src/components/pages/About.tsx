@@ -63,7 +63,7 @@ export const About = () => {
         <>
             <ThemeProvider theme={theme}>
                 <Profile />
-                <Skillset />
+                <Skillset />    
                 <ProfileBlock blockTitle="資格" backGroundColor="#ffe4c4">
                     <Grid container spacing={3} columns={{ xs: 6, md: 8 }} alignItems='center' justifyContent='center'>
                         {certCardProps.map((certCardProp) => (

@@ -3,6 +3,18 @@ export interface ButtonParam {
     path: string,
 }
 
+export interface AvatorObject {
+    alt: string,
+    src: string,
+    width: number,
+    height: number
+}
+
+export interface SkillCardProps {
+    title: string,
+    images: Array<AvatorObject>
+}
+
 export interface certificationCardProps {
     categoryName: string,
     certificationList: string[],

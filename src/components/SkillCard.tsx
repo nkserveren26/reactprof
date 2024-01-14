@@ -13,7 +13,7 @@ export const SkillCard: React.FC<SkillCardProps> = (props) => {
     const {title, images} = props;
     return (
         <>
-            <Card>
+            <Card sx={{ width: 500, height: 220 }}>
                 <CardContent>
                     <Typography align="center" variant="h4" paddingTop={2} paddingBottom={3}>
                         {title}

@@ -18,6 +18,52 @@ import { SkillCard } from "./SkillCard";
 
 const skillCardProps: SkillCardProps[] = [
     {
+        title: "OS",
+        images: [
+            {
+                alt: "windowsserver",
+                src: windowsserver,
+                width: 100,
+                height: 120
+            },
+            {
+                alt: "centos",
+                src: centos,
+                width: 100,
+                height: 110
+            },
+            {
+                alt: "ubuntu",
+                src: ubuntu,
+                width: 100,
+                height: 80
+            },
+        ]
+    },
+    {
+        title: "Virtualization",
+        images: [
+            {
+                alt: "vmware",
+                src: vmware,
+                width: 140,
+                height: 120
+            },
+            {
+                alt: "hyperv",
+                src: hyperv,
+                width: 100,
+                height: 120
+            },
+            {
+                alt: "vsphere",
+                src: vsphere,
+                width: 100,
+                height: 110
+            },
+        ]
+    },
+    {
         title: "Programming",
         images: [
             {
@@ -46,6 +92,23 @@ const skillCardProps: SkillCardProps[] = [
             }
         ]
     },
+    {
+        title: "Frontend",
+        images: [
+            {
+                alt: "react",
+                src: react,
+                width: 130,
+                height: 120
+            },
+            {
+                alt: "vue",
+                src: vue,
+                width: 120,
+                height: 100
+            },
+        ]
+    }
 ];
 
 export const Skillset = () => {
@@ -64,58 +127,11 @@ export const Skillset = () => {
           >
                 <Typography paddingBottom={3} variant="h4" fontWeight="bold">スキルセット</Typography>
                     <Grid container spacing={4} columns={{ xs: 6, md: 8 }} alignItems='center' justifyContent='center'>
-                        <Grid item xs={6} md={4}>
-                            <Card>
-                                <CardContent>
-                                    <Typography align="center" variant="h4">
-                                        OS
-                                    </Typography>
-                                </CardContent>
-                                <CardContent>
-                                    <SDivFlex>
-                                        <Avatar alt="windowsserver" src={windowsserver} sx={{ width: 100, height: 120 }} variant="square" />
-                                        <Avatar alt="centos" src={centos} sx={{ width: 100, height: 110 }} variant="square" />
-                                        <Avatar alt="ubuntu" src={ubuntu} sx={{ width: 100, height: 80 }} variant="square" />
-                                    </SDivFlex>
-                                </CardContent>
-                            </Card>
-                        </Grid>
-                        <Grid item xs={6} md={4}>
-                            <Card>
-                                <CardContent>
-                                    <Typography align="center" variant="h4">
-                                        Virtualization
-                                    </Typography>
-                                </CardContent>
-                                <CardContent>
-                                    <SDivFlex>
-                                        <Avatar alt="vmware" src={vmware} sx={{ width: 140, height: 120 }} variant="square" />
-                                        <Avatar alt="hyperv" src={hyperv} sx={{ width: 100, height: 120 }} variant="square" />
-                                        <Avatar alt="vsphere" src={vsphere} sx={{ width: 100, height: 110 }} variant="square" />
-                                    </SDivFlex>
-                                </CardContent>
-                            </Card>
-                        </Grid>
-                        <Grid item xs={6} md={4}>
-                            {skillCardProps.map((skillCardProp) => (
-                                <SkillCard title={skillCardProp.title} images={skillCardProp.images} />
-                            ))}
-                        </Grid>
-                        <Grid item xs={6} md={4}>
-                            <Card>
-                                <CardContent>
-                                    <Typography align="center" variant="h4">
-                                        Frontend
-                                    </Typography>
-                                </CardContent>
-                                <CardContent>
-                                    <SDivFlex>
-                                        <Avatar alt="react" src={react} sx={{ width: 130, height: 120 }} variant="square" />
-                                        <Avatar alt="vue" src={vue} sx={{ width: 120, height: 100 }} variant="square" />
-                                    </SDivFlex>
-                                </CardContent>
-                            </Card>
-                        </Grid>
+                        {skillCardProps.map((skillCardProp) => (
+                            <Grid item xs={6} md="auto">
+                                <SkillCard title={skillCardProp.title} images={skillCardProp.images} />                               
+                            </Grid>
+                        ))}
                     </Grid>
             </Box>
         </>

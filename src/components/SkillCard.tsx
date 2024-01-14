@@ -15,23 +15,26 @@ type AvatorObject = {
     height:number
 }
 
-type Props = {
+type SkillCardProps = {
     title:string,
     images:Array<AvatorObject>
 }
 
-export const SkillCard: React.FC<Props> = (props) => {
+export const SkillCard: React.FC<SkillCardProps> = (props) => {
     const {title, images} = props;
     return (
         <>
             <Card>
                 <CardContent>
                     <Typography align="center" variant="h4">
-                        Programming
+                        {title}
                     </Typography>
                 </CardContent>
                 <CardContent>
                     <SDivFlex>
+                        {images.map((image) => (
+                            <Avatar alt={image.alt} src={image.src} sx={{ width: image.width, height: image.height }} variant="square" />
+                        ))}
                         <Avatar alt="java" src={java} sx={{ width: 100, height: 120 }} variant="square" />
                         <Avatar alt="python" src={python} sx={{ width: 100, height: 100 }} variant="square" />
                         <Avatar alt="javascript" src={javascript} sx={{ width: 100, height: 80 }} variant="square" />

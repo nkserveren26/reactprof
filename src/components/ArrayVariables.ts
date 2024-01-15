@@ -1,4 +1,4 @@
-import { SkillCardProps } from "./interfaces";
+import { SkillCardProps, certificationCardProps } from "./interfaces";
 import windowsserver from "../img/windowsserver.jpg";
 import centos from "../img/centos.jpg";
 import ubuntu from "../img/ubuntu.jpg";
@@ -107,4 +107,38 @@ export const skillCardProps: SkillCardProps[] = [
             },
         ]
     }
+];
+
+
+// CertificationCard用の配列変数
+export const certCardProps: certificationCardProps[] = [
+    {
+        categoryName: "AWS",
+        certificationList: [
+            "AWS Certified Solutions Architect - Associate",
+            "AWS Certified Developer - Associate",
+            "AWS Certified Solutions Architect - Professional"
+        ],
+    },
+    {
+        categoryName: "Programming",
+        certificationList: [
+            "Oracle Certified Java Programmer, Silver SE 8",
+            "Oracle Certified Java Programmer, Gold SE 8"
+        ],
+    },
+    {
+        categoryName: "Database",
+        certificationList: [
+            "ORACLE MASTER Bronze DBA 2019",
+            "ORACLE MASTER Silver DBA 2019"
+        ],
+    },
+    {
+        categoryName: "Other",
+        certificationList: [
+            "応用情報技術者",
+            "LinuCレベル1 Version 10.0"
+        ],
+    },
 ];

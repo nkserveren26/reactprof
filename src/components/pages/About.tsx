@@ -3,7 +3,7 @@ import { Profile } from "../Profile";
 import { Skillset } from "../Skillset";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { CertificationCard } from "../CertificationCard";
-import { certificationCardProps, SkillCardProps } from "../interfaces";
+import { CertificationCardProps, SkillCardProps } from "../interfaces";
 import { ProfileBlock } from "../ProfileBlock";
 import { SkillCard } from "../SkillCard";
 import { certCardProps, skillCardProps } from "../ArrayVariables";
@@ -42,7 +42,7 @@ export const About: React.FC = () => {
                     <Grid container spacing={3} columns={{ xs: 6, md: 8 }} alignItems='center' justifyContent='center'>
                         {certCardProps.map((certCardProp) => (
                             <Grid item xs={6} md="auto">
-                                <CertificationCard props={certCardProp} />
+                                <CertificationCard categoryName={certCardProp.categoryName} certificationList={certCardProp.certificationList} />
                             </Grid>
                         ))}
                     </Grid>

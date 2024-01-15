@@ -15,7 +15,7 @@ export interface SkillCardProps {
     images: Array<AvatorObject>
 }
 
-export interface certificationCardProps {
+export interface CertificationCardProps {
     categoryName: string,
     certificationList: string[],
 }

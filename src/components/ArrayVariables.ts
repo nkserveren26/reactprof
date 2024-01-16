@@ -1,4 +1,4 @@
-import { SkillCardProps, certificationCardProps } from "./interfaces";
+import { CertificationCardProps, SkillCardProps, } from "./interfaces";
 import windowsserver from "../img/windowsserver.jpg";
 import centos from "../img/centos.jpg";
 import ubuntu from "../img/ubuntu.jpg";
@@ -111,7 +111,7 @@ export const skillCardProps: SkillCardProps[] = [
 
 
 // CertificationCard用の配列変数
-export const certCardProps: certificationCardProps[] = [
+export const certCardProps: CertificationCardProps[] = [
     {
         categoryName: "AWS",
         certificationList: [

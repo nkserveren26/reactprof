@@ -3,6 +3,12 @@ export interface ButtonParam {
     path: string,
 }
 
+export interface ProfObject {
+    icon: JSX.Element,
+    title: string,
+    subheader: string
+}
+
 export interface AvatorObject {
     alt: string,
     src: string,

@@ -1,12 +1,12 @@
 import { Grid, } from "@mui/material";
-import { Profile } from "../Profile";
-import { Skillset } from "../Skillset";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { CertificationCard } from "../CertificationCard";
-import { CertificationCardProps, SkillCardProps } from "../interfaces";
+import { CertificationCardProps, ProfObject, SkillCardProps } from "../interfaces";
 import { ProfileBlock } from "../ProfileBlock";
 import { SkillCard } from "../SkillCard";
 import { certCardProps, skillCardProps } from "../ArrayVariables";
+import { ProfItem } from "../ProfItem";
+import { profItems } from "../ProfItemArray";
 
 
 const theme = createTheme({
@@ -28,7 +28,22 @@ export const About: React.FC = () => {
     return (
         <>
             <ThemeProvider theme={theme}>
-                <Profile />
+                
+                <ProfileBlock blockTitle="プロフィール" backGroundColor="#fffaf0" height="600px">
+                    <Grid container columns={{ xs: 6, sm: 8, md: 12 }} columnSpacing={6} alignItems='center' justifyContent='center'>
+                        {profItems.map((profItem: ProfObject) => {
+                            return (
+                                <Grid item xs={6} sm={4} md="auto" pb={4}>
+                                    <ProfItem
+                                        icon={profItem.icon}
+                                        title={profItem.title}
+                                        subheader={profItem.subheader}
+                                    />
+                                </Grid>
+                            );
+                        })}
+                    </Grid>
+                </ProfileBlock>
                 <ProfileBlock blockTitle="スキルセット" backGroundColor="#87cefa" height="600px">
                     <Grid container spacing={4} columns={{ xs: 6, md: 8 }} alignItems='center' justifyContent='center'>
                         {skillCardProps.map((skillCardProp) => (

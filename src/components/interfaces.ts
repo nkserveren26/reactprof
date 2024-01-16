@@ -3,7 +3,8 @@ export interface ButtonParam {
     path: string,
 }
 
-export interface ProfObject {
+// ProfItemのpropsの型
+export interface ProfItemProps {
     icon: JSX.Element,
     title: string,
     subheader: string
@@ -16,11 +17,13 @@ export interface AvatorObject {
     height: number
 }
 
+// SkillCardのpropsの型
 export interface SkillCardProps {
     title: string,
     images: Array<AvatorObject>
 }
 
+// CertificationCardのpropsの型
 export interface CertificationCardProps {
     categoryName: string,
     certificationList: string[],
@@ -30,6 +33,7 @@ export interface TechnicalElement {
     [key: string]: string;
 }
 
+// ExperienceCardのpropsの型
 export interface ExperienceCardProps {
     image: string,
     title: string,

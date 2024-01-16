@@ -1,7 +1,7 @@
 import { Grid, } from "@mui/material";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { CertificationCard } from "../CertificationCard";
-import { CertificationCardProps, ProfObject, SkillCardProps } from "../interfaces";
+import { CertificationCardProps, ProfItemProps, SkillCardProps } from "../interfaces";
 import { ProfileBlock } from "../ProfileBlock";
 import { SkillCard } from "../SkillCard";
 import { certCardProps, skillCardProps } from "../ArrayVariables";
@@ -31,7 +31,7 @@ export const About: React.FC = () => {
                 
                 <ProfileBlock blockTitle="プロフィール" backGroundColor="#fffaf0" height="600px">
                     <Grid container columns={{ xs: 6, sm: 8, md: 12 }} columnSpacing={6} alignItems='center' justifyContent='center'>
-                        {profItems.map((profItem: ProfObject) => {
+                        {profItems.map((profItem: ProfItemProps) => {
                             return (
                                 <Grid item xs={6} sm={4} md="auto" pb={4}>
                                     <ProfItem

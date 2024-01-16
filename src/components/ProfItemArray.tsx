@@ -1,6 +1,6 @@
 // コンポーネントをインポートして使用するにはファイル拡張子がtsxである必要がある
 
-import { ProfObject } from "./interfaces";
+import { ProfItemProps } from "./interfaces";
 import CakeIcon from '@mui/icons-material/Cake';
 import BloodtypeIcon from '@mui/icons-material/Bloodtype';
 import StarIcon from '@mui/icons-material/Star';
@@ -15,7 +15,7 @@ import LanguageIcon from '@mui/icons-material/Language';
 import SmsIcon from '@mui/icons-material/Sms';
 
 
-export const profItems: ProfObject[] = [
+export const profItems: ProfItemProps[] = [
     {
         icon: <CakeIcon />,
         title: "誕生日",

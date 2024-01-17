@@ -89,7 +89,7 @@ const experienceItems: ExperienceCardProps[] = [
 
 
 
-export const Experience = () => {
+export const Experience: React.FC = () => {
     const [worksDataList, setworksData] = useState([]);
     
     useEffect(() => {

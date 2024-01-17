@@ -28,7 +28,6 @@ export const About: React.FC = () => {
     return (
         <>
             <ThemeProvider theme={theme}>
-                
                 <ProfileBlock blockTitle="プロフィール" backGroundColor="#fffaf0" height="600px">
                     <Grid container columns={{ xs: 6, sm: 8, md: 12 }} columnSpacing={6} alignItems='center' justifyContent='center'>
                         {profItems.map((profItem: ProfItemProps) => {

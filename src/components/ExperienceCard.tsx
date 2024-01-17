@@ -14,6 +14,7 @@ export const ExperienceCard = ({props}: {props: ExperienceCardProps}) => {
     const handleClose = () => {
         setOpen(false);
     };
+    
     return (
         <>
             <Card onClick={handleOpen} style={{ cursor: 'pointer' }} sx={{ width: 345, height: 300 }}>

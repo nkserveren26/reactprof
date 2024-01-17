@@ -89,7 +89,7 @@ const experienceItems: ExperienceCardProps[] = [
 
 
 
-export const Experience = () => {
+export const Experience: React.FC = () => {
     const [worksDataList, setworksData] = useState([]);
     
     useEffect(() => {
@@ -99,7 +99,6 @@ export const Experience = () => {
                 const response = await axios.get(apiUrl);
                 const data = [response.data] as const;
                 setworksData(...data);
-                console.log(worksDataList);
 
             } catch (error) {
                 console.error("Error getting works data:", error);
@@ -113,7 +112,6 @@ export const Experience = () => {
     if (worksDataList.length === 0) {
         return <p>Loading...</p>;
     }
-    
 
     return (
         <>
@@ -125,10 +123,10 @@ export const Experience = () => {
             m={0} pt={5} pl={2} pr={2} sx={{
             backgroundColor: 'white',
         }}>
-            <p>{worksDataList[0]["userId"]}</p>
+            <p>{worksDataList[0]["title"]}</p>
             <Typography paddingBottom={3} fontWeight="bold" variant="h3">Experiences</Typography>
                 <Grid columns={{ xs: 6, sm: 8, md: 12 }} container columnSpacing={6} alignItems="center" justifyContent="center">
-                    {Array.isArray(experienceItems) && experienceItems.map((worksData, index) => (
+                    {Array.isArray(worksDataList) && worksDataList.map((worksData, index) => (
                         <Grid item xs={6} sm={4} md="auto" key={index} pb={6}>
                             <ExperienceCard props={worksData} />
                         </Grid>

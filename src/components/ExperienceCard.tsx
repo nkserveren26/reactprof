@@ -14,7 +14,7 @@ export const ExperienceCard = ({props}: {props: ExperienceCardProps}) => {
     const handleClose = () => {
         setOpen(false);
     };
-    
+
     return (
         <>
             <Card onClick={handleOpen} style={{ cursor: 'pointer' }} sx={{ width: 345, height: 300 }}>
@@ -53,7 +53,7 @@ export const ExperienceCard = ({props}: {props: ExperienceCardProps}) => {
                             return (
                                 <Box key={index}>
                                     <Typography pt={2} fontWeight="bold" variant="subtitle1">
-                                        {technical_element_key}
+                                        {`◆${technical_element_key}`}
                                     </Typography>
                                     <Typography variant="body1">
                                         {technical_elements[technical_element_key]}

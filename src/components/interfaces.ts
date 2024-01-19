@@ -1,6 +1,18 @@
+import { MouseEventHandler } from "react";
+
 export interface ButtonParam {
     buttonLabel: string,
     path: string,
+}
+
+// IconButtonのpropsの型
+export interface IconButtonProps {
+    variant: string,
+    onClick: React.MouseEventHandler<HTMLButtonElement>;
+    icon: React.ReactNode,
+    backgroundColor: string,
+    labelColor: string,
+    children: React.ReactNode;
 }
 
 // ProfItemのpropsの型

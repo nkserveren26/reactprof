@@ -3,6 +3,8 @@ import CloseIcon from '@mui/icons-material/Close';
 import { useState } from "react";
 import { Multiline } from './Multiline';
 import { ExperienceCardProps } from "./interfaces";
+import { IconButton } from "./IconButton";
+import Close from "@mui/icons-material/Close";
 
 export const ExperienceCard = ({props}: {props: ExperienceCardProps}) => {
     const {title, period, image, summary, technical_elements } = props;
@@ -25,9 +27,9 @@ export const ExperienceCard = ({props}: {props: ExperienceCardProps}) => {
                 />
                 <CardContent>
                     <Box height={70}>
-                    <Typography fontWeight="bold" variant="h6" >
-                        {title}
-                    </Typography>
+                        <Typography fontWeight="bold" variant="h6" >
+                            {title}
+                        </Typography>
                     </Box>
                     <Typography >
                         {period}
@@ -65,7 +67,9 @@ export const ExperienceCard = ({props}: {props: ExperienceCardProps}) => {
                     </DialogContentText>
                 </DialogContent>
                 <DialogActions style={{ justifyContent: 'center' }}>
-                    <Button variant="contained" onClick={handleClose} startIcon={<CloseIcon />} style={{ backgroundColor: 'gray', color: 'white' }}>Close</Button>
+                    <IconButton variant="contained" onClick={handleClose} icon={<CloseIcon />} backgroundColor="gray" labelColor="white">
+                        Close
+                    </IconButton>
                 </DialogActions>
             </Dialog>
         </>

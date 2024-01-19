@@ -15,6 +15,14 @@ export interface IconButtonProps {
     children: React.ReactNode;
 }
 
+// ProfileBlockPropsのpropsの型
+export interface ProfileBlockProps {
+    blockTitle: string,
+    height: string,
+    backGroundColor: string,
+    children: React.ReactNode;
+}
+
 // ProfItemのpropsの型
 export interface ProfItemProps {
     icon: JSX.Element,

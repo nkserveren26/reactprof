@@ -1,19 +1,24 @@
-import { Box, Button, Card, CardContent, CardMedia, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Grid, Typography } from "@mui/material";
+import { Box, Card, CardContent, CardMedia, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Grid, Typography } from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
 import { useState } from "react";
 import { Multiline } from './Multiline';
 import { ExperienceCardProps } from "./interfaces";
 import { IconButton } from "./IconButton";
-import Close from "@mui/icons-material/Close";
 
 export const ExperienceCard = ({props}: {props: ExperienceCardProps}) => {
+    
+    // props内のプロパティ
     const {title, period, image, summary, technical_elements } = props;
+    
+    // ダイアログの開閉を制御するstate
     const [open, setOpen] = useState(false);
 
+    // ダイアログを開く関数
     const handleOpen = () => {
         setOpen(true);
     };
 
+    // ダイアログを閉じる関数
     const handleClose = () => {
         setOpen(false);
     };
@@ -36,6 +41,8 @@ export const ExperienceCard = ({props}: {props: ExperienceCardProps}) => {
                     </Typography>
                 </CardContent>
             </Card>
+
+            {/* ダイアログ */}
             <Dialog open={open} onClose={handleClose}>
                 <DialogTitle fontWeight="bold">{title}</DialogTitle>
                 <DialogContent>

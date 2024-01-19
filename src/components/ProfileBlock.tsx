@@ -1,16 +1,11 @@
 import { Box, Typography } from "@mui/material";
+import { ProfileBlockProps } from "./interfaces";
 
-type ProfileBlockProps = {
-    blockTitle: string,
-    height: string,
-    backGroundColor: string,
-    children: React.ReactNode;
-};
-
+// Aboutページの各ブロックの外枠を定義するコンポーネント
 export const ProfileBlock = ({blockTitle, backGroundColor, height, children}: ProfileBlockProps) => {
     const boxStyle = {
         backgroundColor: backGroundColor, // 背景色を指定
-        height: height
+        height: height  // ブロックの縦長を指定
     };
     return (
         <Box style={boxStyle}

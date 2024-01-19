@@ -1,6 +1,7 @@
 import { Button } from "@mui/material";
 import { IconButtonProps } from "./interfaces";
 
+// アイコン付きのボタンコンポーネント
 export const IconButton: React.FC<IconButtonProps> = ({ onClick, icon, children, backgroundColor, labelColor }) => {
     return (
         <>

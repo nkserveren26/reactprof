@@ -1,4 +1,5 @@
-import { Box, Card, CardContent, CardMedia, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Grid, Typography } from "@mui/material";
+import { Box, Button, Card, CardContent, CardMedia, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Grid, Typography } from "@mui/material";
+import CloseIcon from '@mui/icons-material/Close';
 import { useState } from "react";
 import { Multiline } from './Multiline';
 import { ExperienceCardProps } from "./interfaces";
@@ -63,8 +64,8 @@ export const ExperienceCard = ({props}: {props: ExperienceCardProps}) => {
                         })}
                     </DialogContentText>
                 </DialogContent>
-                <DialogActions>
-                    <button onClick={handleClose}>Close</button>
+                <DialogActions style={{ justifyContent: 'center' }}>
+                    <Button variant="contained" onClick={handleClose} startIcon={<CloseIcon />} style={{ backgroundColor: 'gray', color: 'white' }}>Close</Button>
                 </DialogActions>
             </Dialog>
         </>

@@ -1,14 +1,31 @@
 import { Box, Typography } from "@mui/material";
 import { ProfileBlockProps } from "./interfaces";
+import { useEffect, useState } from "react";
 
 // Aboutページの各ブロックの外枠を定義するコンポーネント
 export const ProfileBlock = ({blockTitle, backGroundColor, height, children}: ProfileBlockProps) => {
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
+
+        // ウィンドウサイズ変更をリッスンするイベントリスナーを追加
+        window.addEventListener('resize', handleResize);
+
+        // コンポーネントのアンマウント時にイベントリスナーを削除
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+    
     const getProfileBlockHeight = () => {
         let blockHeight: string = "";
         // 横幅が800px以下の場合は高さをheightの1.3倍にする。
-        if (window.innerWidth <= 1200) {
+        if (windowWidth <= 980) {
             // 横幅が800px以下の場合は高さを800pxに固定
-            blockHeight = String(parseInt(height) * 1.5);
+            blockHeight = "900";
         } else {
             blockHeight = height;
         }
@@ -26,6 +43,7 @@ export const ProfileBlock = ({blockTitle, backGroundColor, height, children}: Pr
             flexDirection="column"
             alignItems="center"
             justifyContent="center"
+            
         >
             <Typography paddingBottom={3} variant="h4" fontWeight="bold">{blockTitle}</Typography>
             {children}

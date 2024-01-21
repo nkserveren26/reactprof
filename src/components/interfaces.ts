@@ -22,6 +22,7 @@ export interface ProfileBlockProps {
     backGroundColor: string,
     children: React.ReactNode,
     thresholdWidth: number,
+    maxHeight: string,
 }
 
 // ProfItemのpropsの型

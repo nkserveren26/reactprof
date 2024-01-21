@@ -20,7 +20,9 @@ export interface ProfileBlockProps {
     blockTitle: string,
     height: string,
     backGroundColor: string,
-    children: React.ReactNode;
+    children: React.ReactNode,
+    thresholdWidth: number,
+    maxHeight: string,
 }
 
 // ProfItemのpropsの型

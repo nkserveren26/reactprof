@@ -2,12 +2,6 @@ import { Avatar, Card, CardHeader } from "@mui/material";
 import CakeIcon from '@mui/icons-material/Cake';
 import { ProfItemProps } from "./interfaces";
 
-type Props = {
-    icon: JSX.Element,
-    title: string,
-    subheader: string
-}
-
 export const ProfItem: React.FC<ProfItemProps> = (props) => {
     const { icon, title, subheader } = props;
 

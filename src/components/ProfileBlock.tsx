@@ -3,7 +3,7 @@ import { ProfileBlockProps } from "./interfaces";
 import { useEffect, useState } from "react";
 
 // Aboutページの各ブロックの外枠を定義するコンポーネント
-export const ProfileBlock = ({blockTitle, backGroundColor, height, children}: ProfileBlockProps) => {
+export const ProfileBlock = ({blockTitle, backGroundColor, height, thresholdWidth, children}: ProfileBlockProps) => {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
     useEffect(() => {
@@ -23,7 +23,7 @@ export const ProfileBlock = ({blockTitle, backGroundColor, height, children}: Pr
     const getProfileBlockHeight = () => {
         let blockHeight: string = "";
         // 横幅が800px以下の場合は高さをheightの1.3倍にする。
-        if (windowWidth <= 980) {
+        if (windowWidth <= thresholdWidth) {
             // 横幅が800px以下の場合は高さを800pxに固定
             blockHeight = "900";
         } else {

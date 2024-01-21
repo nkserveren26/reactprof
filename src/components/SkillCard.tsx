@@ -21,8 +21,8 @@ export const SkillCard: React.FC<SkillCardProps> = (props) => {
                 </CardContent>
                 <CardContent>
                     <SDivFlex>
-                        {images.map((image) => (
-                            <Avatar alt={image.alt} src={image.src} sx={{ width: image.width, height: image.height }} variant="square" />
+                        {images.map((image, index) => (
+                            <Avatar alt={image.alt} src={image.src} sx={{ width: image.width, height: image.height }} variant="square" key={index} />
                         ))}
                     </SDivFlex>
                 </CardContent>

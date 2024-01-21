@@ -30,9 +30,9 @@ export const About: React.FC = () => {
             <ThemeProvider theme={theme}>
                 <ProfileBlock blockTitle="プロフィール" backGroundColor="#fffaf0" height="600" thresholdWidth={980} maxHeight="900">
                     <Grid container columns={{ xs: 6, sm: 8, md: 12 }} alignItems='center' justifyContent='center'>
-                        {profItems.map((profItem: ProfItemProps) => {
+                        {profItems.map((profItem: ProfItemProps, index) => {
                             return (
-                                <Grid item xs="auto" sm="auto" md="auto" pl={1} pb={4}>
+                                <Grid item xs="auto" sm="auto" md="auto" pl={1} pb={4} key={index}>
                                     <ProfItem
                                         icon={profItem.icon}
                                         title={profItem.title}
@@ -45,8 +45,8 @@ export const About: React.FC = () => {
                 </ProfileBlock>
                 <ProfileBlock blockTitle="スキルセット" backGroundColor="#87cefa" height="600" thresholdWidth={1080} maxHeight="1100">
                     <Grid container spacing={3} columns={{ xs: 6, md: 8 }} alignItems='center' justifyContent='center'>
-                        {skillCardProps.map((skillCardProp) => (
-                            <Grid item xs="auto" md="auto">
+                        {skillCardProps.map((skillCardProp, index) => (
+                            <Grid item xs="auto" md="auto" key={index}>
                                 <SkillCard title={skillCardProp.title} images={skillCardProp.images} />
                             </Grid>
                         ))}
@@ -54,8 +54,8 @@ export const About: React.FC = () => {
                 </ProfileBlock> 
                 <ProfileBlock blockTitle="資格" backGroundColor="#ffe4c4" height="540" thresholdWidth={1080} maxHeight="1000" >
                     <Grid container spacing={3} columns={{ xs: 6, md: 8 }} alignItems='center' justifyContent='center'>
-                        {certCardProps.map((certCardProp) => (
-                            <Grid item xs="auto" md="auto">
+                        {certCardProps.map((certCardProp, index) => (
+                            <Grid item xs="auto" md="auto" key={index}>
                                 <CertificationCard categoryName={certCardProp.categoryName} certificationList={certCardProp.certificationList} />
                             </Grid>
                         ))}

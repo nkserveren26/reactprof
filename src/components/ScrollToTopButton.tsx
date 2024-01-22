@@ -1,12 +1,35 @@
 import { Button } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
 export const ScrollToTopButton: React.FC = () => {
     const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollTop = document.documentElement.scrollTop;
+            setIsVisible(scrollTop > 100); // スクロール位置が100pxを超えたら表示
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        // コンポーネントがアンマウントされるときにイベントリスナーを解除
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth', // スムーズなスクロールを有効にする
+        });
+    };
+
     return (
         <>
-        <SButton disabled={!isVisible}></SButton>
+            <SButton disabled={!isVisible} onClick={scrollToTop} startIcon={<KeyboardArrowUpIcon />}></SButton>
         </>
     );
 }

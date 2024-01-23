@@ -39,10 +39,11 @@ const SButton = styled(Button)`
     position: fixed;
     bottom: 20px;
     right: 20px;
-    display: ${(props) => (props.disabled ? "none" : "block")};
+    display: ${(props) => (props.disabled ? "none" : "flex")};
+    align-items: center;
     background-color: #007bff;
     color: #fff;
-    border-radius: 5px;
+    border-radius: 50%;
     padding: 10px;
     cursor: pointer;
   }

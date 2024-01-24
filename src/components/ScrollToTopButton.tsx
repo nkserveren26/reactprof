@@ -39,12 +39,16 @@ const SButton = styled(Button)`
     position: fixed;
     bottom: 20px;
     right: 20px;
-    display: ${(props) => (props.disabled ? "none" : "flex")};
+    opacity: ${(props) => (props.disabled ? '0' : '1')};
     align-items: center;
     background-color: #007bff;
     color: #fff;
     border-radius: 50%;
     padding: 10px;
     cursor: pointer;
+    transition: opacity 0.3s ease;
+    &:hover {
+      background-color: #0056b3;
+    }
   }
 `;

@@ -1,4 +1,4 @@
-import { Button } from "@mui/material";
+import { Button, IconButton } from "@mui/material";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
@@ -29,22 +29,25 @@ export const ScrollToTopButton: React.FC = () => {
 
     return (
         <>
-            <SButton disabled={!isVisible} onClick={scrollToTop} startIcon={<KeyboardArrowUpIcon />}></SButton>
+            <SButton disabled={!isVisible} onClick={scrollToTop}>
+                <KeyboardArrowUpIcon />
+            </SButton>
         </>
     );
 }
 
-const SButton = styled(Button)`
+const SButton = styled(IconButton)`
   && {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    display: ${(props) => (props.disabled ? "none" : "flex")};
-    align-items: center;
     background-color: #007bff;
     color: #fff;
     border-radius: 50%;
-    padding: 10px;
-    cursor: pointer;
+    opacity: ${(props) => (props.disabled ? '0' : '1')};
+    transition: opacity 0.3s ease;
+    &:hover {
+      background-color: #0056b3;
+    }
   }
 `;

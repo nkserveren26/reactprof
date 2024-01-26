@@ -13,6 +13,7 @@ import SportsBaseballIcon from '@mui/icons-material/SportsBaseball';
 import MusicNoteIcon from '@mui/icons-material/MusicNote';
 import LanguageIcon from '@mui/icons-material/Language';
 import SmsIcon from '@mui/icons-material/Sms';
+import React from 'react';
 
 
 export const profItems: ProfItemProps[] = [

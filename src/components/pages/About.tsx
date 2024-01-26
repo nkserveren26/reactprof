@@ -8,6 +8,7 @@ import { certCardProps, skillCardProps } from "../ArrayVariables";
 import { ProfItem } from "../ProfItem";
 import { profItems } from "../ProfItemArray";
 import { ScrollToTopButton } from "../ScrollToTopButton";
+import React from 'react';
 
 
 const theme = createTheme({
@@ -29,7 +30,6 @@ export const About: React.FC = () => {
     return (
         <>
             <ThemeProvider theme={theme}>
-                <ScrollToTopButton />
                 <ProfileBlock blockTitle="プロフィール" backGroundColor="#fffaf0" height="600" thresholdWidth={980} maxHeight="900">
                     <Grid container columns={{ xs: 6, sm: 8, md: 12 }} alignItems='center' justifyContent='center'>
                         {profItems.map((profItem: ProfItemProps, index) => {
@@ -63,6 +63,7 @@ export const About: React.FC = () => {
                         ))}
                     </Grid>
                 </ProfileBlock>
+                <ScrollToTopButton />
             </ThemeProvider>
         </>
     );

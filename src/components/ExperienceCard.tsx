@@ -1,9 +1,10 @@
-import { Box, Card, CardContent, CardMedia, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Grid, Typography } from "@mui/material";
+import { Box, Card, CardContent, CardMedia, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Typography } from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
 import { useState } from "react";
 import { Multiline } from './Multiline';
 import { ExperienceCardProps } from "./interfaces";
 import { IconButton } from "./IconButton";
+import React from 'react';
 
 export const ExperienceCard = ({props}: {props: ExperienceCardProps}) => {
     

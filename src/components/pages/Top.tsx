@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import background from "../../img/IMG_4871.jpg";
-import snoopy from "../../img/IMG_7330.jpg"
+import snoopy from "../../img/IMG_7330.jpg";
+import React from 'react';
 
 export const Top = () => {
     return (

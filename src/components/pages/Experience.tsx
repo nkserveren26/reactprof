@@ -4,6 +4,8 @@ import { ExperienceCardProps } from '../interfaces';
 import { ExperienceCard } from '../ExperienceCard';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { ScrollToTopButton } from '../ScrollToTopButton';
+import React from 'react';
 
 
 export const Experience: React.FC = () => {
@@ -41,13 +43,14 @@ export const Experience: React.FC = () => {
             backgroundColor: 'white',
         }}>
             <Typography paddingBottom={3} fontWeight="bold" variant="h3">Experiences</Typography>
-                <Grid columns={{ xs: 6, sm: 8, md: 12 }} container columnSpacing={6} alignItems="center" justifyContent="center">
-                    {Array.isArray(worksDataList) && worksDataList.map((worksData, index) => (
-                        <Grid item xs={6} sm={4} md="auto" key={index} pb={6}>
-                            <ExperienceCard props={worksData} />
-                        </Grid>
-                    ))}
-                </Grid>
+            <Grid columns={{ xs: 6, sm: 8, md: 12 }} container columnSpacing={6} alignItems="center" justifyContent="center">
+                {Array.isArray(worksDataList) && worksDataList.map((worksData, index) => (
+                    <Grid item xs={6} sm={4} md="auto" key={index} pb={6}>
+                        <ExperienceCard props={worksData} />
+                    </Grid>
+                ))}
+            </Grid>
+            <ScrollToTopButton />
         </Box>
         </>
     )

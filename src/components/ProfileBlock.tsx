@@ -1,6 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import { ProfileBlockProps } from "./interfaces";
 import { useEffect, useState } from "react";
+import React from 'react';
 
 // Aboutページの各ブロックの外枠を定義するコンポーネント
 export const ProfileBlock = ({blockTitle, backGroundColor, height, thresholdWidth, maxHeight, children}: ProfileBlockProps) => {

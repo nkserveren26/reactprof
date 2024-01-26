@@ -1,7 +1,9 @@
-import { Button, IconButton } from "@mui/material";
+import { IconButton } from "@mui/material";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import React from 'react';
+import { animateScroll as scroll } from "react-scroll";
 
 export const ScrollToTopButton: React.FC = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -21,10 +23,7 @@ export const ScrollToTopButton: React.FC = () => {
     }, []);
 
     const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth', // スムーズなスクロールを有効にする
-        });
+        scroll.scrollToTop();
     };
 
     return (

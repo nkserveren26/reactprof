@@ -1,5 +1,4 @@
 import { FC } from "react";
-import { Box } from "@mui/material";
 import { AppBar } from "@mui/material";
 import { Toolbar } from "@mui/material";
 import {Typography} from "@mui/material";
@@ -7,6 +6,7 @@ import { Button } from "@mui/material";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Link } from "react-router-dom";
 import { ButtonParam } from "./interfaces";
+import React from 'react';
 
 const theme = createTheme({
   palette: {

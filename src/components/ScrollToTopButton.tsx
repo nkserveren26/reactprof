@@ -39,7 +39,7 @@ const SButton = styled(IconButton)`
   && {
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    right: 30px;
     background-color: #007bff;
     color: #fff;
     border-radius: 50%;

@@ -7,6 +7,7 @@ import Box from '@mui/material/Box';
 import { Experience } from './components/pages/Experience';
 import { ScrollToTopButton } from './components/ScrollToTopButton';
 import React from 'react';
+import { ScrollTop } from './components/ScrollToTop';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <SDiv>
       <BrowserRouter>
         <Header title='N.K Portfolio' />
+        <ScrollTop />
         <Routes>
           <Route path="/" element={<Top />}>
           </Route>

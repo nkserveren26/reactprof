@@ -4,7 +4,7 @@ import { Toolbar } from "@mui/material";
 import {Typography} from "@mui/material";
 import { Button } from "@mui/material";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ButtonParam } from "./interfaces";
 import React from 'react';
 
@@ -39,6 +39,7 @@ type HeaderProps = {
 };
 
 export const Header:FC<HeaderProps> = (props) => {
+    const navigate = useNavigate();
     const { title } = props; 
     return (
       <ThemeProvider theme={theme}>
@@ -50,7 +51,7 @@ export const Header:FC<HeaderProps> = (props) => {
               {buttonParams.map((buttonParam, index) => {
                 const {buttonLabel, path} = buttonParam;
                 return (
-                  <Button key={index} color="inherit" component={Link} to={path}>
+                  <Button key={index} color="inherit" onClick={() => navigate(path)}>
                     {buttonLabel}
                   </Button>
                 )

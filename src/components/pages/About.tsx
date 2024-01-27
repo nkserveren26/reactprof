@@ -27,6 +27,7 @@ const theme = createTheme({
 });
 
 export const About: React.FC = () => {
+    
     return (
         <>
             <ThemeProvider theme={theme}>

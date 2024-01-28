@@ -1,4 +1,4 @@
-import { IconButton } from "@mui/material";
+import { IconButton, Tooltip } from "@mui/material";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
@@ -28,9 +28,11 @@ export const ScrollToTopButton: React.FC = () => {
 
     return (
         <>
-            <SButton disabled={!isVisible} onClick={scrollToTop}>
-                <KeyboardArrowUpIcon />
-            </SButton>
+            <Tooltip title="Scroll to Top">
+                <SButton disabled={!isVisible} onClick={scrollToTop}>
+                    <KeyboardArrowUpIcon />
+                </SButton>
+            </Tooltip>
         </>
     );
 }

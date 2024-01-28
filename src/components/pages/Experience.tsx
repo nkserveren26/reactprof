@@ -1,6 +1,5 @@
 import Box from '@mui/material/Box';
 import {  Grid, Typography } from "@mui/material";
-import { ExperienceCardProps } from '../interfaces';
 import { ExperienceCard } from '../ExperienceCard';
 import { useEffect, useState } from 'react';
 import axios from 'axios';

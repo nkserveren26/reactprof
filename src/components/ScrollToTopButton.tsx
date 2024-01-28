@@ -29,9 +29,9 @@ export const ScrollToTopButton: React.FC = () => {
     return (
         <>
             <Tooltip title="Scroll to Top">
-            <SButton disabled={!isVisible} onClick={scrollToTop}>
-                <KeyboardArrowUpIcon />
-            </SButton>
+                <SButton disabled={!isVisible} onClick={scrollToTop}>
+                    <KeyboardArrowUpIcon />
+                </SButton>
             </Tooltip>
         </>
     );

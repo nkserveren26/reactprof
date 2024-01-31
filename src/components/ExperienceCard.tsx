@@ -87,7 +87,7 @@ export const ExperienceCard = ({props}: {props: ExperienceCardProps}) => {
 
 const StyledCard = styled(Card)`
   && {
-    transition: transform 0.8s ease-in-out;
+    transition: transform 0.2s ease-in-out;
     &:hover {
         transform: scale(1.04, 1.04);
     }

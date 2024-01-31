@@ -5,6 +5,7 @@ import { Multiline } from './Multiline';
 import { ExperienceCardProps } from "./interfaces";
 import { IconButton } from "./IconButton";
 import React from 'react';
+import styled from "styled-components";
 
 export const ExperienceCard = ({props}: {props: ExperienceCardProps}) => {
     
@@ -26,7 +27,7 @@ export const ExperienceCard = ({props}: {props: ExperienceCardProps}) => {
 
     return (
         <>
-            <Card onClick={handleOpen} style={{ cursor: 'pointer' }} sx={{ width: 345, height: 300 }}>
+            <StyledCard onClick={handleOpen} style={{ cursor: 'pointer' }} sx={{ width: 345, height: 300 }}>
                 <CardMedia
                     sx={{ height: 160 }}
                     image={`${process.env.PUBLIC_URL}/${image}`}
@@ -41,7 +42,7 @@ export const ExperienceCard = ({props}: {props: ExperienceCardProps}) => {
                         {period}
                     </Typography>
                 </CardContent>
-            </Card>
+            </StyledCard>
 
             {/* ダイアログ */}
             <Dialog open={open} onClose={handleClose}>
@@ -83,3 +84,13 @@ export const ExperienceCard = ({props}: {props: ExperienceCardProps}) => {
         </>
     )
 }
+
+const StyledCard = styled(Card)`
+  && {
+    transition: transform 0.2s ease-in-out;
+    &:hover {
+        transform: scale(1.04, 1.04);
+    }
+  }
+  
+`;

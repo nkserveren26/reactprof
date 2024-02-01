@@ -1,7 +1,7 @@
 import { Grid, } from "@mui/material";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { CertificationCard } from "../CertificationCard";
-import { CertificationCardProps, ProfItemProps, SkillCardProps } from "../interfaces";
+import { ProfItemProps } from "../interfaces";
 import { ProfileBlock } from "../ProfileBlock";
 import { SkillCard } from "../SkillCard";
 import { certCardProps, skillCardProps } from "../ArrayVariables";

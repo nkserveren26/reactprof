@@ -5,7 +5,6 @@ import { Top } from './components/pages/Top';
 import { About } from './components/pages/About';
 import Box from '@mui/material/Box';
 import { Experience } from './components/pages/Experience';
-import { ScrollToTopButton } from './components/ScrollToTopButton';
 import React from 'react';
 import { ScrollTop } from './components/ScrollToTop';
 

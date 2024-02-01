@@ -44,7 +44,7 @@ export const Experience: React.FC = () => {
             <Typography paddingBottom={3} fontWeight="bold" variant="h3">Experiences</Typography>
             <Grid columns={{ xs: 6, sm: 8, md: 12 }} container columnSpacing={6} alignItems="center" justifyContent="center">
                 {Array.isArray(worksDataList) && worksDataList.map((worksData, index) => (
-                    <Grid item xs={6} sm={4} md="auto" key={index} pb={6}>
+                    <Grid item xs={6} sm="auto" md="auto" key={index} pb={6}>
                         <ExperienceCard props={worksData} />
                     </Grid>
                 ))}

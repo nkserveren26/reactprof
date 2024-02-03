@@ -13,19 +13,19 @@ function App() {
     <div className="App">
       <Box sx={{ backgroundColor: 'black', }}>
         <SDiv>
-      <BrowserRouter>
-        <Header title='N.K Portfolio' />
-        <ScrollTop />
-        <Routes>
-          <Route path="/" element={<Top />}>
-          </Route>
-          <Route path="/about" element={<About />}>
-          </Route>
-          <Route path="/experience" element={<Experience />}>
-          </Route>
-        </Routes>
-      </BrowserRouter>
-      </SDiv>
+          <BrowserRouter>
+            <Header title='N.K Portfolio' />
+            <ScrollTop />
+            <Routes>
+              <Route path="/" element={<Top />}>
+              </Route>
+              <Route path="/about" element={<About />}>
+              </Route>
+              <Route path="/experience" element={<Experience />}>
+              </Route>
+            </Routes>
+          </BrowserRouter>
+        </SDiv>
       </Box>
     </div>
   );

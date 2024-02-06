@@ -126,14 +126,14 @@ export const Skillset = () => {
               justifyContent="center"
           >
                 <Typography paddingBottom={3} variant="h4" fontWeight="bold">スキルセット</Typography>
-                    <Grid container spacing={4} columns={{ xs: 6, md: 8 }} alignItems='center' justifyContent='center'>
-                        {skillCardProps.map((skillCardProp) => (
-                            <Grid item xs={6} md="auto">
-                                <SkillCard title={skillCardProp.title} images={skillCardProp.images} />                               
-                            </Grid>
-                        ))}
-                    </Grid>
-            </Box>
+                <Grid container spacing={4} columns={{ xs: 6, md: 8 }} alignItems='center' justifyContent='center'>
+                    {skillCardProps.map((skillCardProp) => (
+                        <Grid item xs={6} md="auto">
+                            <SkillCard title={skillCardProp.title} images={skillCardProp.images} />                               
+                        </Grid>
+                    ))}
+                </Grid>
+          </Box>
         </>
     )
 }

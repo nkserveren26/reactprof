@@ -1,9 +1,9 @@
 import Box from '@mui/material/Box';
 import {  Grid, Typography } from "@mui/material";
-import { ExperienceCard } from '../ExperienceCard';
+import { ExperienceCard } from '../card/ExperienceCard';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import { ScrollToTopButton } from '../ScrollToTopButton';
+import { ScrollToTopButton } from '../button/ScrollToTopButton';
 import React from 'react';
 
 

@@ -1,6 +1,6 @@
 // コンポーネントをインポートして使用するにはファイル拡張子がtsxである必要がある
 
-import { ProfItemProps } from "./interfaces";
+import { ProfItemProps } from "../interface/interfaces";
 import CakeIcon from '@mui/icons-material/Cake';
 import BloodtypeIcon from '@mui/icons-material/Bloodtype';
 import StarIcon from '@mui/icons-material/Star';

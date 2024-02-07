@@ -1,9 +1,9 @@
 import { Box, Card, CardContent, CardMedia, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Typography } from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
 import { useState } from "react";
-import { Multiline } from './Multiline';
-import { ExperienceCardProps } from "./interfaces";
-import { IconButton } from "./IconButton";
+import { Multiline } from '../text/Multiline';
+import { ExperienceCardProps } from "../interface/interfaces";
+import { IconButton } from "../button/IconButton";
 import React from 'react';
 import styled from "styled-components";
 

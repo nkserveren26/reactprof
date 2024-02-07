@@ -1,5 +1,5 @@
 import { Box, Typography } from "@mui/material";
-import { ProfileBlockProps } from "./interfaces";
+import { ProfileBlockProps } from "../interface/interfaces";
 import { useEffect, useState } from "react";
 import React from 'react';
 

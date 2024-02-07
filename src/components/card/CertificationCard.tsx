@@ -1,7 +1,7 @@
 import { Card } from "@mui/material";
 import { CardContent, Typography, } from "@mui/material";
-import { CertificationList } from "./CertificationList";
-import { CertificationCardProps } from "./interfaces";
+import { CertificationList } from "../list/CertificationList";
+import { CertificationCardProps } from "../interface/interfaces";
 import React from 'react';
 
 // 特定カテゴリの資格一覧を表示するCardコンポーネント

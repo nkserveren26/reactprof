@@ -1,13 +1,13 @@
 import { Grid, } from "@mui/material";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { CertificationCard } from "../CertificationCard";
-import { ProfItemProps } from "../interfaces";
-import { ProfileBlock } from "../ProfileBlock";
-import { SkillCard } from "../SkillCard";
-import { certCardProps, skillCardProps } from "../ArrayVariables";
-import { ProfItem } from "../ProfItem";
-import { profItems } from "../ProfItemArray";
-import { ScrollToTopButton } from "../ScrollToTopButton";
+import { CertificationCard } from "../card/CertificationCard";
+import { ProfItemProps } from "../interface/interfaces";
+import { ProfileBlock } from "../block/ProfileBlock";
+import { SkillCard } from "../card/SkillCard";
+import { certCardProps, skillCardProps } from "../variable/ArrayVariables";
+import { ProfCard } from "../card/ProfCard";
+import { profItems } from "../variable/ProfItemArray";
+import { ScrollToTopButton } from "../button/ScrollToTopButton";
 import React from 'react';
 
 
@@ -36,7 +36,7 @@ export const About: React.FC = () => {
                         {profItems.map((profItem: ProfItemProps, index) => {
                             return (
                                 <Grid item xs="auto" sm="auto" md="auto" pl={1} pb={4} key={index}>
-                                    <ProfItem
+                                    <ProfCard
                                         icon={profItem.icon}
                                         title={profItem.title}
                                         subheader={profItem.subheader}

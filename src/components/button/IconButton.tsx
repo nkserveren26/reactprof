@@ -1,5 +1,5 @@
 import { Button } from "@mui/material";
-import { IconButtonProps } from "./interfaces";
+import { IconButtonProps } from "../interface/interfaces";
 import React from 'react';
 
 // アイコン付きのボタンコンポーネント

@@ -1,16 +1,16 @@
-import { CertificationCardProps, SkillCardProps, } from "./interfaces";
-import windowsserver from "../img/windowsserver.jpg";
-import centos from "../img/centos.jpg";
-import ubuntu from "../img/ubuntu.jpg";
-import vmware from "../img/vmware.jpg";
-import hyperv from "../img/hyper-v.jpg";
-import vsphere from "../img/vsphere.jpg";
-import java from "../img/java.jpg";
-import python from "../img/python.jpg";
-import javascript from "../img/javascript.jpg";
-import typescript from "../img/typescript.jpg";
-import react from "../img/react.jpg";
-import vue from "../img/vue.jpg";
+import { CertificationCardProps, SkillCardProps, } from "../interface/interfaces";
+import windowsserver from "../../img/windowsserver.jpg";
+import centos from "../../img/centos.jpg";
+import ubuntu from "../../img/ubuntu.jpg";
+import vmware from "../../img/vmware.jpg";
+import hyperv from "../../img/hyper-v.jpg";
+import vsphere from "../../img/vsphere.jpg";
+import java from "../../img/java.jpg";
+import python from "../../img/python.jpg";
+import javascript from "../../img/javascript.jpg";
+import typescript from "../../img/typescript.jpg";
+import react from "../../img/react.jpg";
+import vue from "../../img/vue.jpg";
 
 
 // SkillCard用の配列変数

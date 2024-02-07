@@ -1,7 +1,7 @@
 import { CardContent, Typography, Avatar } from "@mui/material";
 import { Card } from "@mui/material";
 import styled from "styled-components";
-import { SkillCardProps } from "./interfaces";
+import { SkillCardProps } from "../interface/interfaces";
 import React from 'react';
 
 

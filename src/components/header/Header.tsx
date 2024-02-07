@@ -5,7 +5,7 @@ import {Typography} from "@mui/material";
 import { Button } from "@mui/material";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useNavigate } from "react-router-dom";
-import { ButtonParam } from "./interfaces";
+import { ButtonParam } from "../interface/interfaces";
 import React from 'react';
 
 const theme = createTheme({

@@ -1,17 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.e6c13ad2.css",
-    "main.js": "/static/js/main.1dadb3fd.js",
-    "static/js/787.cf53e342.chunk.js": "/static/js/787.cf53e342.chunk.js",
-    "static/media/IMG_4871.jpg": "/static/media/IMG_4871.df04c451d7ede9d81066.jpg",
-    "static/media/IMG_7330.jpg": "/static/media/IMG_7330.2dd337d637082dac5bc2.jpg",
+    "main.css": "/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/static/js/main.f0601aeb.chunk.js",
+    "main.js.map": "/static/js/main.f0601aeb.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.7e291cb7.js",
+    "runtime~main.js.map": "/static/js/runtime~main.7e291cb7.js.map",
+    "static/js/2.eb9989a9.chunk.js": "/static/js/2.eb9989a9.chunk.js",
+    "static/js/2.eb9989a9.chunk.js.map": "/static/js/2.eb9989a9.chunk.js.map",
+    "static/js/3.2d2ba55b.chunk.js": "/static/js/3.2d2ba55b.chunk.js",
+    "static/js/3.2d2ba55b.chunk.js.map": "/static/js/3.2d2ba55b.chunk.js.map",
     "index.html": "/index.html",
-    "main.e6c13ad2.css.map": "/static/css/main.e6c13ad2.css.map",
-    "main.1dadb3fd.js.map": "/static/js/main.1dadb3fd.js.map",
-    "787.cf53e342.chunk.js.map": "/static/js/787.cf53e342.chunk.js.map"
-  },
-  "entrypoints": [
-    "static/css/main.e6c13ad2.css",
-    "static/js/main.1dadb3fd.js"
-  ]
+    "precache-manifest.8a019a3d114d0a57c5ade7fa9422d8e9.js": "/precache-manifest.8a019a3d114d0a57c5ade7fa9422d8e9.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.5ecd60fb.chunk.css.map": "/static/css/main.5ecd60fb.chunk.css.map",
+    "static/media/IMG_4871.jpg": "/static/media/IMG_4871.75f32079.jpg",
+    "static/media/IMG_7330.jpg": "/static/media/IMG_7330.cb896cc8.jpg",
+    "static/media/centos.jpg": "/static/media/centos.d75703bb.jpg",
+    "static/media/hyper-v.jpg": "/static/media/hyper-v.54609e62.jpg",
+    "static/media/react.jpg": "/static/media/react.a819df26.jpg",
+    "static/media/vmware.jpg": "/static/media/vmware.05a0b929.jpg",
+    "static/media/vsphere.jpg": "/static/media/vsphere.f06fbd95.jpg",
+    "static/media/vue.jpg": "/static/media/vue.d290dd02.jpg"
+  }
 }

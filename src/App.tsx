@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <Box sx={{ backgroundColor: 'black', }}>
         <SDiv>
-          <BrowserRouter>
+          <BrowserRouter basename={process.env.PUBLIC_URL}>
             <Header title='N.K Portfolio' />
             <ScrollTop />
             <Routes>

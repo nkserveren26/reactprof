@@ -23,12 +23,12 @@ export const profItems: ProfItemProps[] = [
         subheader: "1993/2/26"
     },
     {
-        icon: <StarIcon />,
+        icon: <StarIcon sx={{ color: '#FFD700' }} />,
         title: "星座",
         subheader: "うお座"
     },
     {
-        icon: <BloodtypeIcon />,
+        icon: <BloodtypeIcon sx={{ color: '#FF4500' }} />,
         title: "血液型",
         subheader: "B型"
     },
@@ -38,22 +38,22 @@ export const profItems: ProfItemProps[] = [
         subheader: "大阪府枚方市"
     },
     {
-        icon: <WorkIcon />,
+        icon: <WorkIcon sx={{ color: '#8B4513' }} />,
         title: "職業",
         subheader: "ITエンジニア"
     },
     {
-        icon: <FastfoodIcon />,
+        icon: <FastfoodIcon sx={{ color: '#CD853F' }} />,
         title: "好きな食べ物",
         subheader: "チョコレート"
     },
     {
-        icon: <FavoriteIcon />,
+        icon: <FavoriteIcon sx={{ color: '#FF1493' }} />,
         title: "趣味",
         subheader: "音楽鑑賞、スポーツ観戦"
     },
     {
-        icon: <SportsSoccerIcon />,
+        icon: <SportsSoccerIcon sx={{ color: '#000000' }} />,
         title: "応援しているサッカーチーム",
         subheader: "リバプールFC"
     },
@@ -63,12 +63,12 @@ export const profItems: ProfItemProps[] = [
         subheader: "埼玉西武ライオンズ"
     },
     {
-        icon: <MusicNoteIcon />,
+        icon: <MusicNoteIcon sx={{ color: '#FFA500' }} />,
         title: "好きなアーティスト",
         subheader: "B'z、Mr.Children、サザンオールスターズ、Oasis"
     },
     {
-        icon: <LanguageIcon />,
+        icon: <LanguageIcon sx={{ color: '#1E90FF' }} />,
         title: "好きな外国",
         subheader: "ドイツ"
     },

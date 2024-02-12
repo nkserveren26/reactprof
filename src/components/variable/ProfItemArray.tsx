@@ -23,7 +23,7 @@ export const profItems: ProfItemProps[] = [
         subheader: "1993/2/26"
     },
     {
-        icon: <StarIcon />,
+        icon: <StarIcon sx={{ color: '#FFD700' }} />,
         title: "星座",
         subheader: "うお座"
     },

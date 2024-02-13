@@ -73,7 +73,7 @@ export const profItems: ProfItemProps[] = [
         subheader: "ドイツ"
     },
     {
-        icon: <SmsIcon />,
+        icon: <SmsIcon sx={{ color: '#006400' }} />,
         title: "好きな言葉",
         subheader: "人間万事塞翁が馬"
     },

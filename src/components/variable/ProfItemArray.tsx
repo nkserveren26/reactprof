@@ -33,7 +33,7 @@ export const profItems: ProfItemProps[] = [
         subheader: "B型"
     },
     {
-        icon: <LocationCityIcon />,
+        icon: <LocationCityIcon sx={{ color: '#008b8b' }} />,
         title: "出身",
         subheader: "大阪府枚方市"
     },

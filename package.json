@@ -29,12 +29,12 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "set NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
-    "build": "set NODE_OPTIONS=--openssl-legacy-provider && react-scripts build",
+    "start": "NODE_OPTIONS='--openssl-legacy-provider' react-scripts start",
+    "build": "NODE_OPTIONS='--openssl-legacy-provider' react-scripts build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "test": "set NODE_OPTIONS=--openssl-legacy-provider && react-scripts test",
-    "eject": "set NODE_OPTIONS=--openssl-legacy-provider && react-scripts eject"
+    "test": "NODE_OPTIONS='--openssl-legacy-provider' react-scripts test",
+    "eject": "NODE_OPTIONS='--openssl-legacy-provider' react-scripts eject"
   },
   "eslintConfig": {
     "extends": [

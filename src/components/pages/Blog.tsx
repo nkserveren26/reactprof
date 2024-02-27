@@ -1,6 +1,12 @@
 import { Box, Grid, Typography } from "@mui/material";
 import React from "react";
 
+const testdata = {
+    title: "test",
+    image: "",
+    period: "2023/1/1"
+}
+
 export const Blog: React.FC = () => {
     return (
         <>

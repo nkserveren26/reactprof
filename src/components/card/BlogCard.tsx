@@ -1,6 +1,7 @@
 import { Box, Card, CardContent, CardMedia, Typography } from "@mui/material";
 import styled from "styled-components";
 import { BlogCardProps } from "../interface/interfaces";
+import React from "react";
 
 export const BlogCard = ({ props }: { props: BlogCardProps }) => {
     // props内のプロパティ

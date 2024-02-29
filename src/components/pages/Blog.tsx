@@ -1,5 +1,5 @@
 import { Box, Grid, Typography } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import { BlogCard } from "../card/BlogCard";
 import { BlogCardProps, ExperienceCardProps } from "../interface/interfaces";
 
@@ -11,6 +11,7 @@ const testdata: BlogCardProps = {
 }
 
 export const Blog: React.FC = () => {
+    const [blogList, setBlogData] = useState([]);
     return (
         <>
             <Box

@@ -8,14 +8,17 @@ import React from 'react';
 
 
 export const Experience: React.FC = () => {
+    // worksDataを保持するuseState
     const [worksDataList, setworksData] = useState([]);
     
     useEffect(() => {
         const getWorksData = async () => {
             try {
                 const apiUrl: string = process.env.REACT_APP_GET_WORKS_URL;
+                // worksDataを取得
                 const response = await axios.get(apiUrl);
                 const data = [response.data] as const;
+                //取得したworksDataをworksDataListにセット
                 setworksData(...data);
 
             } catch (error) {
@@ -42,6 +45,7 @@ export const Experience: React.FC = () => {
             backgroundColor: 'white',
         }}>
             <Typography paddingBottom={3} fontWeight="bold" variant="h3">Experiences</Typography>
+            {/* ExperienceCardを一覧表示する */}
             <Grid columns={{ xs: 6, sm: 8, md: 12 }} container columnSpacing={6} alignItems="center" justifyContent="center">
                 {Array.isArray(worksDataList) && worksDataList.map((worksData, index) => (
                     <Grid item xs={6} sm="auto" md="auto" key={index} pb={6}>
@@ -49,6 +53,7 @@ export const Experience: React.FC = () => {
                     </Grid>
                 ))}
             </Grid>
+            {/* 画面トップにスクロールするボタン */}
             <ScrollToTopButton />
         </Box>
         </>

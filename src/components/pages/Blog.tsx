@@ -1,7 +1,8 @@
 import { Box, Grid, Typography } from "@mui/material";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BlogCard } from "../card/BlogCard";
 import { BlogCardProps, ExperienceCardProps } from "../interface/interfaces";
+import axios from "axios";
 
 const testdata: BlogCardProps = {
     title: "test",
@@ -12,6 +13,24 @@ const testdata: BlogCardProps = {
 
 export const Blog: React.FC = () => {
     const [blogList, setBlogData] = useState([]);
+
+    useEffect(() => {
+        const getBlogData = async () => {
+            try {
+                const apiUrl: string = process.env.REACT_APP_GET_BLOGS_URL;
+                // worksDataを取得
+                const response = await axios.get(apiUrl);
+                const data = [response.data] as const;
+                //取得したworksDataをworksDataListにセット
+                setBlogData(...data);
+
+            } catch (error) {
+                console.error("Error getting blog data:", error);
+            }
+        }
+
+        getBlogData();
+    }, []);
     return (
         <>
             <Box

@@ -32,6 +32,10 @@ const buttonParams: ButtonParam[] = [
     buttonLabel: "Experience",
     path: "/experience",
   },
+  {
+    buttonLabel: "Blog",
+    path: "/blog",
+  },
 ];
 
 type HeaderProps = {

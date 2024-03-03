@@ -7,8 +7,8 @@ import axios from "axios";
 const testdata: BlogCardProps = {
     title: "test",
     image: "Amplify.jpg",
-    period: "2023/1/1",
-    link: ""
+    published_date: "2023/1/1",
+    url: ""
 }
 
 export const Blog: React.FC = () => {
@@ -23,7 +23,7 @@ export const Blog: React.FC = () => {
                 const data = [response.data] as const;
                 //取得したworksDataをworksDataListにセット
                 setBlogData(...data);
-
+                
             } catch (error) {
                 console.error("Error getting blog data:", error);
             }

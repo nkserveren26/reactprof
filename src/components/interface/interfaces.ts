@@ -68,6 +68,6 @@ export interface ExperienceCardProps {
 export interface BlogCardProps {
     image: string,
     title: string,
-    period: string,
-    link: string,
+    published_date: string,
+    url: string,
 }

@@ -5,23 +5,23 @@ import React from "react";
 
 export const BlogCard = ({ props }: { props: BlogCardProps }) => {
     // props内のプロパティ
-    const { title, period, image, link } = props;
+    const { title, published_date, image, url } = props;
 
     return (
         <>
-            <StyledCard style={{ cursor: 'pointer' }} sx={{ width: 345, height: 300 }}>
+            <StyledCard style={{ cursor: 'pointer' }} sx={{ width: 345, height: 310 }}>
                 <CardMedia
                     sx={{ height: 160 }}
                     image={`${process.env.PUBLIC_URL}/${image}`}
                 />
                 <CardContent>
-                    <Box height={70}>
+                    <Box height={95}>
                         <Typography fontWeight="bold" variant="h6" >
                             {title}
                         </Typography>
                     </Box>
                     <Typography >
-                        {period}
+                        {published_date}
                     </Typography>
                 </CardContent>
             </StyledCard>

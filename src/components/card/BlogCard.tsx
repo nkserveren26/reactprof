@@ -7,9 +7,16 @@ export const BlogCard = ({ props }: { props: BlogCardProps }) => {
     // props内のプロパティ
     const { title, published_date, image, url } = props;
 
+    // リンク先へ遷移する関数
+    const handleCardClick = () => {
+        // _blankは別タブで開くオプション
+        // noopenerはリンク先ページでリンク元ページを参照できなくするオプション
+        window.open(url, "_blank", "noopener");
+    };
+
     return (
         <>
-            <StyledCard style={{ cursor: 'pointer' }} sx={{ width: 345, height: 310 }}>
+            <StyledCard onClick={handleCardClick} style={{ cursor: 'pointer' }} sx={{ width: 345, height: 310 }}>
                 <CardMedia
                     sx={{ height: 160 }}
                     image={`${process.env.PUBLIC_URL}/${image}`}

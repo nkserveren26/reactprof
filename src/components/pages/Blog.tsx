@@ -43,13 +43,11 @@ export const Blog: React.FC = () => {
             }}>
                 <Typography paddingBottom={3} fontWeight="bold" variant="h3">My Tech Blogs</Typography>
                 <Grid columns={{ xs: 6, sm: 8, md: 12 }} container columnSpacing={6} alignItems="center" justifyContent="center">
-                    <Grid item xs={6} sm="auto" md="auto" pb={6}>
-                        {Array.isArray(blogList) && blogList.map((blog, index) => (
-                            <Grid item xs={6} sm="auto" md="auto" key={index} pb={6}>
-                                <BlogCard props={blog} />
-                            </Grid>
-                        ))}
-                    </Grid>
+                    {Array.isArray(blogList) && blogList.map((blog, index) => (
+                        <Grid item xs={6} sm="auto" md="auto" key={index} pb={6}>
+                            <BlogCard props={blog} />
+                        </Grid>
+                    ))}
                 </Grid>
             </Box>
         </>

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { BlogCard } from "../card/BlogCard";
 import { BlogCardProps, ExperienceCardProps } from "../interface/interfaces";
 import axios from "axios";
+import { ScrollToTopButton } from "../button/ScrollToTopButton";
 
 const testdata: BlogCardProps = {
     title: "test",
@@ -49,6 +50,7 @@ export const Blog: React.FC = () => {
                         </Grid>
                     ))}
                 </Grid>
+                <ScrollToTopButton />
             </Box>
         </>
     )

@@ -43,6 +43,7 @@ export const Blog: React.FC = () => {
                     backgroundColor: 'white',
             }}>
                 <Typography paddingBottom={3} fontWeight="bold" variant="h3">My Tech Blogs</Typography>
+                <Typography paddingBottom={3} variant="h6">これまでに私が投稿した技術記事です</Typography>
                 <Grid columns={{ xs: 6, sm: 8, md: 12 }} container columnSpacing={6} alignItems="center" justifyContent="center">
                     {Array.isArray(blogList) && blogList.map((blog, index) => (
                         <Grid item xs={6} sm="auto" md="auto" key={index} pb={6}>

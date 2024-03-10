@@ -1,16 +1,8 @@
 import { Box, Grid, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { BlogCard } from "../card/BlogCard";
-import { BlogCardProps, ExperienceCardProps } from "../interface/interfaces";
 import axios from "axios";
 import { ScrollToTopButton } from "../button/ScrollToTopButton";
-
-const testdata: BlogCardProps = {
-    title: "test",
-    image: "Amplify.jpg",
-    published_date: "2023/1/1",
-    url: ""
-}
 
 export const Blog: React.FC = () => {
     const [blogList, setBlogData] = useState([]);

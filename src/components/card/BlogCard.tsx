@@ -36,7 +36,9 @@ export const BlogCard = ({ props }: { props: BlogCardProps }) => {
     )
 }
 
+// Cardのレイアウト
 const StyledCard = styled(Card)`
+// マウスをホバーするとCardを少し膨らませるアニメーション
   && {
     transition: transform 0.2s ease-in-out;
     &:hover {

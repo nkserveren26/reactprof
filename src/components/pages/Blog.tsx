@@ -11,10 +11,10 @@ export const Blog: React.FC = () => {
         const getBlogData = async () => {
             try {
                 const apiUrl: string = process.env.REACT_APP_GET_BLOGS_URL;
-                // worksDataを取得
+                // APIから、これまで投稿した技術記事の一覧を取得
                 const response = await axios.get(apiUrl);
                 const data = [response.data] as const;
-                //取得したworksDataをworksDataListにセット
+                //取得したデータをblogListにセット
                 setBlogData(...data);
                 
             } catch (error) {

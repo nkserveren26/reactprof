@@ -7,6 +7,7 @@ import Box from '@mui/material/Box';
 import { Experience } from './components/pages/Experience';
 import React from 'react';
 import { ScrollTop } from './components/scroll/ScrollToTop';
+import { Blog } from './components/pages/Blog';
 
 function App() {
   return (
@@ -22,6 +23,8 @@ function App() {
               <Route path="/about" element={<About />}>
               </Route>
               <Route path="/experience" element={<Experience />}>
+              </Route>
+              <Route path="/blog" element={<Blog />}>
               </Route>
             </Routes>
           </BrowserRouter>

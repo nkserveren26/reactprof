@@ -63,3 +63,11 @@ export interface ExperienceCardProps {
     summary: string,
     technical_elements: TechnicalElement
 }
+
+// BlogCardのpropsの型
+export interface BlogCardProps {
+    image: string,
+    title: string,
+    published_date: string,
+    url: string,
+}

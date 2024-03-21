@@ -45,6 +45,7 @@ export const Experience: React.FC = () => {
             backgroundColor: 'white',
         }}>
             <Typography paddingBottom={3} fontWeight="bold" variant="h3">Experiences</Typography>
+            <Typography paddingBottom={3} variant="h6">これまでに私が経験した業務です</Typography>
             {/* ExperienceCardを一覧表示する */}
             <Grid columns={{ xs: 6, sm: 8, md: 12 }} container columnSpacing={6} alignItems="center" justifyContent="center">
                 {Array.isArray(worksDataList) && worksDataList.map((worksData, index) => (
